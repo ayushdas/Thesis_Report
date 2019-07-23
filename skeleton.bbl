@@ -1,0 +1,83 @@
+\begin{thebibliography}{10}
+
+\bibitem{rule-based-general}
+Lily~A. Chylek, Leonard~A. Harris, Chang-Shung Tung, James~R. Faeder, Carlos~F.
+  Lopez, and William~S. Hlavacek.
+\newblock Rule-based modeling: a computational approach for studying
+  biomolecular site dynamics in cell signaling systems.
+\newblock {\em Wiley Interdiscip Rev Syst Biol Med}, 6(1): 13–36, 2014.
+
+\bibitem{chylek2014rule}
+Lily~A Chylek, Leonard~A Harris, Chang-Shung Tung, James~R Faeder, Carlos~F
+  Lopez, and William~S Hlavacek.
+\newblock Rule-based modeling: a computational approach for studying
+  biomolecular site dynamics in cell signaling systems.
+\newblock {\em Wiley Interdisciplinary Reviews: Systems Biology and Medicine},
+  6(1):13--36, 2014.
+
+\bibitem{ppiDef}
+Javier De~Las~Rivas and Celia Fontanillo.
+\newblock Protein--protein interactions essentials: key concepts to building
+  and analyzing interactome networks.
+\newblock {\em PLoS computational biology}, 6(6):e1000807, 2010.
+
+\bibitem{kasim}
+Danos~V. et~al.
+\newblock ( 2007b ) scalable simulation of cellular signaling networks.
+\newblock In {\em Asian Symposium on Programming Languages and Systems}, pages
+  139--157. Springer, 2007.
+
+\bibitem{kappa}
+Danos~V. et~al.
+\newblock (2007a) rule-based modelling of cellular signalling.
+\newblock {\em In: Proceedings of the Eighteenth International Conference on
+  Concurrency Theory, CONCUR 2007}, Vol. 4703 of Lecture Notes in Computer
+  Science. Lisbon, Portugal, Springer-Verlag Berlin Heidelberg, pp. 17–41.,
+  2007.
+
+\bibitem{bioNetGen}
+Faeder~J.R. et~al.
+\newblock Rule-based modeling of biochemical systems with bionetgen.
+\newblock {\em In: Maly I.V. (ed.) Methods in Molecular Biology}, Systems
+  Biology , Vol. 500, Springer-Verlag Berlin Heidelberg, Springer, pp.
+  113–167, 2009.
+
+\bibitem{ppimp}
+David~C Fry.
+\newblock Targeting protein-protein interactions for drug discovery.
+\newblock In {\em Protein-Protein Interactions}, pages 93--106. Springer, 2015.
+
+\bibitem{cancer}
+Alexander Goncearenco, Minghui Li, Franco~L Simonetti, Benjamin~A Shoemaker,
+  and Anna~R Panchenko.
+\newblock Exploring protein-protein interactions as drug targets for
+  anti-cancer therapy with in silico workflows.
+\newblock In {\em Proteomics for Drug Discovery}, pages 221--236. Springer,
+  2017.
+
+\bibitem{pathwayAnalysis}
+Woochang Hwang, Yongdeuk Hwang, Sunjae Lee, and Doheon Lee.
+\newblock Rule-based multi-scale simulation for drug effect pathway analysis.
+\newblock In {\em BMC medical informatics and decision making}, volume~13,
+  page~S4. BioMed Central, 2013.
+
+\bibitem{uniprot}
+Eric Jain, Amos Bairoch, Severine Duvaud, Isabelle Phan, Nicole Redaschi,
+  Baris~E Suzek, Maria~J Martin, Peter McGarvey, and Elisabeth Gasteiger.
+\newblock Infrastructure for the life sciences: design and implementation of
+  the uniprot website.
+\newblock {\em BMC bioinformatics}, 10(1):136, 2009.
+
+\bibitem{ode}
+Le~Novere N and Endler L.
+\newblock Using chemical kinetics to model biochemical pathways.
+\newblock {\em Methods Mol Biol.}, 1021:147-67., 2013.
+
+\bibitem{proteinDruggability}
+Emanuele Perola, Lee Herman, and Jonathan Weiss.
+\newblock Development of a rule-based method for the assessment of protein
+  druggability.
+\newblock {\em Journal of chemical information and modeling}, 52(4):1027--1038,
+  2012.
+
+\end{thebibliography}
