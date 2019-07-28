@@ -1,7 +1,9 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Background}{3}
-\contentsline {chapter}{\numberline {3}Method}{4}
-\contentsline {chapter}{\numberline {4}Results and Discussion}{5}
-\contentsline {chapter}{\numberline {5}Conclusions}{6}
-\contentsline {section}{\numberline {5.1}Final Reminder}{6}
-\contentsline {chapter}{Bibliography}{7}
+\contentsline {section}{\numberline {2.1}Protein-Protein Interaction (PPI) Databases}{4}
+\contentsline {section}{\numberline {2.2}Understanding rule based specification of protein interactions}{5}
+\contentsline {chapter}{\numberline {3}Method}{6}
+\contentsline {chapter}{\numberline {4}Results and Discussion}{7}
+\contentsline {chapter}{\numberline {5}Conclusions}{8}
+\contentsline {section}{\numberline {5.1}Final Reminder}{8}
+\contentsline {chapter}{Bibliography}{9}

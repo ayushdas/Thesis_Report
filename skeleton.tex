@@ -112,7 +112,41 @@ This work is divided into chapters and we present a brief summary of each of the
 %(Author, Date) format if you prefer.
 
 \chapter{Background}
-% Total 12 pages
+Protein-Protein interactions play a vital role in the regular functioning of life processes. Hence the study of these interactions, plays a crucial role in improving our understanding of diseases and the life processes.
+
+Historically, PPI interactions were modeled using ordinary differential equations (ODE) \cite{ode}. However, as per \cite{rule-based-general}, this traditional approach of modeling PPI through ODE had several limitations due to the following reasons.
+
+\begin{itemize}
+\item
+The protein molecules can potentially interact in an exponential number of ways. 
+\item
+Due to the exponential number of possibilities only large reaction networks can capture them.
+\item
+This is a problem because traditional approaches like ODE require explicit network specification.
+\end{itemize}
+
+This problem is overcome by the use of local rules where the network specification is implicit. As a result the specification of the model concise. These rules can be specified using languages for model specification like Kappa \cite{kappa}  and BioNetGen\cite{bioNetGen}. Specialized software tools then enable researchers to visualize the PPI interactions.
+
+In the following sub-sections we will first explore the kinds of Protein interaction databases, followed by a section that develops on the understanding of rule based specification of protein interactions. This is then followed by a section that deals with the motivation of constructing the rule based database system and application of protein interaction database in biology.
+
+\section{Protein-Protein Interaction (PPI) Databases}
+As per \cite{typesOfPPIdb}, the kinds of protein-protein interaction databases can be divided into three types.
+\begin{itemize}
+	\item
+	\textbf{Pathway:} In such databases researchers and domain experts collect rules that are generally agreed upon by the scientific community. These rules are manually curated and cover a large domain of information like association with diseases, stoichiometry of reactions and so on. Due to the requirement of manual intervention and the aim to achieve a high accuracy, construction of such databases is a laborious process.\\ Examples of such databases include KEGG \cite{kegg} and Reactome \cite{reactome}.
+	\item
+	\textbf{Experimentally Verified: } Such databases contain an assimilation of the protein interaction rules that have been experimentally verified. In other words such databases contain experimentally observed (verified) PPI rules. The method of the rule organization and the amount of information carried varies from one database to another. \\Examples of such databases include IntAct \cite{intact} and BioGrid \cite{biogrid}.
+	\item
+	\textbf{Experimentally Verified or Computationally predicted: } Such databases contain PPI rules that are either experimentally observed or are computationally predicted. These rules however, do not involve any manual organization. The computationally obtained PPIs may contain false positives and hence, to improve the accuracy a confidence score is often attached to the rules. In addition to using computational methods to obtain PPI rules, Natural Language Processing and text mining methods are also used in order to extract PPI rules from research literature.\\  Examples of such databases include  STRING \cite{string} and GeneMANIA \cite{genemania}.
+\end{itemize}
+
+While the three types of databases mentioned above, serve as the primary categorization of PPI databases, there also exists categorization of PPI databases based on diseases, organisms of particular kind and so on.
+
+According to \cite{typesOfPPIdb}, there are over hundreds of databases that aim to collect and store protein interactions. However, none of these databases capture the complexity of biological systems in it's entirety. These kinds of details include - temporal dependencies, spatial dependencies, protein variations and so on.
+
+\section{Understanding rule based specification of protein interactions}
+ 
+
 \chapter{Method}
 
 A dissertation usually contains several chapters.
