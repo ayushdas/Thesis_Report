@@ -23,6 +23,7 @@
 \usepackage{yfonts}
 \usepackage[pdftex]{graphicx}  
 \usepackage{float}
+\usepackage{url}
 
 \begin{document}
 \begin{preliminary}
@@ -62,7 +63,7 @@ PPI interactions are used to model the dynamics of protein complexes in the cell
 
 This project is aimed at creating a database for Protein-Protein interactions stored in the Kappa rule format \cite{kappa}. The database would allow the PPI interactions to be retrieved based on certain conditions that are elaborated in Chapter 3. Rule based simulation of protein interaction can either be performed based on Stochastic Simulation Algorithm (SSA) or using Ordinary differential equations \cite{chylek2014rule}. In this project feeding the Kappa rules, to a Kappa simulator will help in visualizing the interactions of protein molecules in the Kappa simulator(KaSim) \cite{kasim}. KaSim is an implementation, of an algorithm called continuous time Monte-Carlo (CTMC), which is created for systems based on rules. 
 
-This work is divided into chapters and we present a brief summary of each of these chapters. Chapter 2 covers, the kinds of PPI database that exist in literature, followed by a description of the kappa rules which encapsulates their syntax and semantics. The application of rule-based methods are also further elaborated in Chapter 2. Chapter 3 covers, the work that has been undertaken. This section elucidates the methodology used to create the database, the python scripts used to extract the relevant information from the assimilation of data collected by researchers. This section also elaborates on the SQL stored procedures used to extract the PPI rules and the user interface for accessing those rules. Furthermore, this chapter elaborates on the steps for deploying the database scripts and the web application. In Chapter 4, the validation pipeline for the data within the database is defined concisely. In this chapter we retrieve some of the PPI rules and validate the result set with the provided data. Chapter 5 presents the conclusion with future improvements and proposal for work that can be extended from the project.
+This work is divided into chapters and we present a brief summary of each of these chapters. Chapter 2 covers, the kinds of PPI database that exist in literature, followed by a description of the kappa rules which encapsulates their syntax and semantics. The application of rule-based methods are also further elaborated in Chapter 2. Chapter 3 covers, the work that has been undertaken. This section elucidates the methodology used to create the database, the python scripts used to extract the relevant information from the assimilation of data collected by researchers. This section also elaborates on the SQL stored procedures used to extract the PPI rules and the user interface for accessing those rules. Furthermore, this chapter elaborates on the steps for deploying the database scripts and the web application. This chapter also walks through the process of adding a new rule to the database, to enable future PPI additions. In Chapter 4, the validation pipeline for the data within the database is defined concisely. In this chapter we retrieve some of the PPI rules and validate the result set with the provided data. Chapter 5 presents the conclusion with future improvements and proposal for work that can be extended from the project.
 % In the intodouction we write about what is PPI and why is it Important, what motivates the study of PPI, How will the database be useful, what the PPI Rules encapsulate, applications. What the other sections are all about. total 4 pages
 %The preliminary material of your report should contain:
 %\begin{itemize}
@@ -168,8 +169,30 @@ Furthermore, \textswab{M} denotes the state of a system which is also called the
 Modeling tools built using latest technology help to visualize the protein interactions. Some examples of this include Virtual Cell \cite{vcell} and Kappa Simulator KaSim \cite{kasim}, which provide an environment for the modeling and simulation of cellular interactions. The Kappa rules can be fed into KaSim, which is a protein interaction simulator that implements continuous time Monte–Carlo algorithm (CTMC). KaSim  employs the process of stochastic modeling that can be used to describe highly complex interactions. Besides KaSim there also exist other stochastic modeling tools like STOCHSIM \cite{stochsim}, which can be used by researchers, to comapare the results.
 
 \subsection{Syntax and semantics of Kappa rules}
+Kappa rules are formally documented well. Their specification and syntax can be found in \cite{kasim} and \cite{kappaURL}. In rule based specifications graphs are formally specified as objects which have been converted to a notation of textual form, for convenience. As per these rules an agent site denoted  by `s', has a binding state `n' can be specified as s[n]. Here `n' can be any positive integer or may be replaced by a `.', which indicates the site is not bound. In case `n' is a positive integer then it implies that the site is bound to another unique site having the same binding site `n', within the same PPI expression. Hence, a sub expression like, (Agent1 [site1 [1]], Agent2 [site2 [1]] ) indicates that Agent1 is bound to Agent2 through site1 of Agent1 and site2 of Agent2. The protein sites may also have their own internal states which is specified within curly brackets `\{\}'. Hence Agent1(site1\{p\}[.]), implies that Agent1 has an unbound site name site1 that is in an internal phosphorylated state (denoted by `p'). 
 
-\section{Application of Protein Interaction Database}
+Figure \ref{fig:kappa}, depicts the process of obtaining a Protein interaction rule from the textual information of research literature. These rules when passed to KaSim, the Kappa simulator help to visualize the PPI interactions. 
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{kappa.png}	
+	\caption{Depiction of obtaining a Protein-Protein interaction (PPI) rule from research literature. Source: \cite{kappaPlatform}}
+	\label{fig:kappa}
+\end{figure}
+
+\section{Application of Protein-Protein Interaction Databases}
+Protein-Protein Interaction databases have several applications. Some of these are covered in this section.
+\begin{itemize}
+\item
+\textbf{Assessment of protein druggability:} As per \cite{druggability}, ruled based PPI stored in a database are useful in the development of a rule-based method for the assessment of protein druggability. Selection of target is an important step for the discovery of drugs. The effectiveness of a drug target depends upon factors like  its chemical influence and biological importance. Druggability is defined as the ability of a target to bind a drug-like molecule with an affinity that is at a therapeutically useful level. \cite{druggability} develops a set of simple rules that govern the process of durggability which can be applied in the future to get an idea of the chemical influence of prospective targets. These rules are based on the property space of druggable pockets like volume, depth and so on.
+\item 
+\textbf{Drug effect pathway analysis:} Pathway analysis involves the study of specific molecular pathways using formalism that are qualitative and quantitative. This domain provides a tremendous computational complexity and experimental approaches incur a high cost. Research conducted in \cite{ruleMultiscale}, included extraction of close to two hundred rules, related to type 2 diabetes obtained from varied sources like literature, pathway databases and conversion from different kinds of models. Using these rules \cite{ruleMultiscale} constructs a multi-scale modeling platform which is rule based. This modeling platform was then used for simulation of drug effect pathways of type 2 diabetes drugs and check for it's efficacy. The research concluded that their simulation helped in identifying effective drug combinations and provide a new way to effectively apply existing drugs for new targets.
+\item
+\textbf{Application of rule based models in biology:} The research in \cite{rule_based} includes an explanation of the application, of rule based models. It includes examples of how rule based models can be applied to describe the dynamics of population in a predator-prey ecosystem and simulate rhythm changes that are circadian. 
+\end{itemize}
+
+All these research and applications help in substantiating the claim that Protein-Protein Interaction (PPI) databases are an important tool for the study of biological interactions, processes and drug discovery that help enrich our life.
  
 
 \chapter{Method}

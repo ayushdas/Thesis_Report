@@ -1,10 +1,19 @@
 \begin{thebibliography}{10}
 
+\bibitem{kappaURL}
+\url{https://kappalanguage.org/documentation}.
+
 \bibitem{kappaPlatform}
 Pierre Boutillier, Mutaamba Maasha, Xing Li, Héctor~F Medina-Abarca, Jean
   Krivine, Jérôme Feret, Ioana Cristescu, Angus~G Forbes, and Walter Fontana.
 \newblock {The Kappa platform for rule-based modeling}.
 \newblock {\em Bioinformatics}, 34(13):i583--i592, 06 2018.
+
+\bibitem{rule_based}
+{\'A}lvaro Bustos, Ignacio Fuenzalida, Rodrigo Santib{\'a}{\~n}ez, Tom{\'a}s
+  P{\'e}rez-Acle, and Alberto~JM Martin.
+\newblock Rule-based models and applications in biology.
+\newblock In {\em Computational Cell Biology}, pages 3--32. Springer, 2018.
 
 \bibitem{rule-based-general}
 Lily~A. Chylek, Leonard~A. Harris, Chang-Shung Tung, James~R. Faeder, Carlos~F.
@@ -73,6 +82,12 @@ Woochang Hwang, Yongdeuk Hwang, Sunjae Lee, and Doheon Lee.
 \newblock In {\em BMC medical informatics and decision making}, volume~13,
   page~S4. BioMed Central, 2013.
 
+\bibitem{ruleMultiscale}
+Woochang Hwang, Yongdeuk Hwang, Sunjae Lee, and Doheon Lee.
+\newblock Rule-based multi-scale simulation for drug effect pathway analysis.
+\newblock In {\em BMC medical informatics and decision making}, volume~13,
+  page~S4. BioMed Central, 2013.
+
 \bibitem{uniprot}
 Eric Jain, Amos Bairoch, Severine Duvaud, Isabelle Phan, Nicole Redaschi,
   Baris~E Suzek, Maria~J Martin, Peter McGarvey, and Elisabeth Gasteiger.
@@ -104,6 +119,13 @@ Le~Novere N and Endler L.
 \newblock {\em Methods Mol Biol.}, 1021:147-67., 2013.
 
 \bibitem{proteinDruggability}
+Emanuele Perola, Lee Herman, and Jonathan Weiss.
+\newblock Development of a rule-based method for the assessment of protein
+  druggability.
+\newblock {\em Journal of chemical information and modeling}, 52(4):1027--1038,
+  2012.
+
+\bibitem{druggability}
 Emanuele Perola, Lee Herman, and Jonathan Weiss.
 \newblock Development of a rule-based method for the assessment of protein
   druggability.

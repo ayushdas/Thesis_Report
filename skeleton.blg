@@ -7,46 +7,48 @@ Repeated entry---line 200 of file mybibfile.bib
  : @incollection{bioNetGen
  :                        ,
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in kappaURL
 Warning--can't use both volume and number fields in pathwayAnalysis
-You've used 22 entries,
+Warning--can't use both volume and number fields in ruleMultiscale
+You've used 26 entries,
             2118 wiz_defined-function locations,
-            636 strings with 9060 characters,
-and the built_in function-call counts, 9832 in all, are:
-= -- 935
-> -- 642
-< -- 8
-+ -- 258
-- -- 232
-* -- 817
-:= -- 1664
-add.period$ -- 72
-call.type$ -- 22
-change.case$ -- 177
+            647 strings with 9374 characters,
+and the built_in function-call counts, 11279 in all, are:
+= -- 1076
+> -- 712
+< -- 11
++ -- 286
+- -- 256
+* -- 922
+:= -- 1885
+add.period$ -- 84
+call.type$ -- 26
+change.case$ -- 200
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 302
-empty$ -- 630
-format.name$ -- 232
-if$ -- 1988
+cite$ -- 29
+duplicate$ -- 359
+empty$ -- 749
+format.name$ -- 256
+if$ -- 2305
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 22
-newline$ -- 113
-num.names$ -- 44
-pop$ -- 161
+int.to.str$ -- 26
+missing$ -- 25
+newline$ -- 131
+num.names$ -- 50
+pop$ -- 194
 preamble$ -- 1
-purify$ -- 155
+purify$ -- 175
 quote$ -- 0
-skip$ -- 216
+skip$ -- 256
 stack$ -- 0
-substring$ -- 573
-swap$ -- 69
-text.length$ -- 8
+substring$ -- 647
+swap$ -- 86
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
-warning$ -- 1
-while$ -- 81
-width$ -- 24
-write$ -- 252
+type$ -- 104
+warning$ -- 3
+while$ -- 93
+width$ -- 28
+write$ -- 293
 (There was 1 error message)
