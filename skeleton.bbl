@@ -36,6 +36,14 @@ David Croft, Gavin O’Kelly, Guanming Wu, Robin Haw, Marc Gillespie, Lisa
 \newblock Reactome: a database of reactions, pathways and biological processes.
 \newblock {\em Nucleic acids research}, 39(suppl\_1):D691--D697, 2010.
 
+\bibitem{danos2012graphs}
+Vincent Danos, J{\'e}r{\^o}me Feret, Walter Fontana, Russell Harmer, Jonathan
+  Hayman, Jean Krivine, Chris Thompson-Walsh, and Glynn Winskel.
+\newblock Graphs, rewriting and pathway reconstruction for rule-based models.
+\newblock In {\em IARCS Annual Conference on Foundations of Software Technology
+  and Theoretical Computer Science (FSTTCS 2012)}. Schloss
+  Dagstuhl-Leibniz-Zentrum fuer Informatik, 2012.
+
 \bibitem{ppiDef}
 Javier De~Las~Rivas and Celia Fontanillo.
 \newblock Protein--protein interactions essentials: key concepts to building

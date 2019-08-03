@@ -168,6 +168,8 @@ Furthermore, \textswab{M} denotes the state of a system which is also called the
 
 Modeling tools built using latest technology help to visualize the protein interactions. Some examples of this include Virtual Cell \cite{vcell} and Kappa Simulator KaSim \cite{kasim}, which provide an environment for the modeling and simulation of cellular interactions. The Kappa rules can be fed into KaSim, which is a protein interaction simulator that implements continuous time Monte–Carlo algorithm (CTMC). KaSim  employs the process of stochastic modeling that can be used to describe highly complex interactions. Besides KaSim there also exist other stochastic modeling tools like STOCHSIM \cite{stochsim}, which can be used by researchers, to comapare the results.
 
+Besides KaSim, the Kappa simulator, there are tools like KaSA (Kappa Static Analyzer) and KaSTOR (Kappa Story Extractor). As per \cite{kappaPlatform}, KaSA helps in analyzing the static properties of the model that can help in debugging, as it can efficiently detect discrepancies between actual and expected behavior. KaSA relies on a technique called `abstract interpretation' described in \cite{kappaPlatform} to achieve this task. KaSTOR helps by providing an insight as to how an event of interest EOI was obtained in a particular event trace. EOI is obtained by the simulation of a model. KaSTOR works on the cocnept of mechanistic causality in molecular systems. KaSim generates an output called `trace' which is a sequence of events generated as a result of the simulation. Algorithms such as the one stated in \cite{danos2012graphs} aid in this process. 
+
 \subsection{Syntax and semantics of Kappa rules}
 Kappa rules are formally documented well. Their specification and syntax can be found in \cite{kasim} and \cite{kappaURL}. In rule based specifications graphs are formally specified as objects which have been converted to a notation of textual form, for convenience. As per these rules an agent site denoted  by `s', has a binding state `n' can be specified as s[n]. Here `n' can be any positive integer or may be replaced by a `.', which indicates the site is not bound. In case `n' is a positive integer then it implies that the site is bound to another unique site having the same binding site `n', within the same PPI expression. Hence, a sub expression like, (Agent1 [site1 [1]], Agent2 [site2 [1]] ) indicates that Agent1 is bound to Agent2 through site1 of Agent1 and site2 of Agent2. The protein sites may also have their own internal states which is specified within curly brackets `\{\}'. Hence Agent1(site1\{p\}[.]), implies that Agent1 has an unbound site name site1 that is in an internal phosphorylated state (denoted by `p'). 
 
@@ -176,7 +178,7 @@ Figure \ref{fig:kappa}, depicts the process of obtaining a Protein interaction r
 \begin{figure}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{kappa.png}	
+	\includegraphics[width=\linewidth,height=5cm,keepaspectratio]{kappa.png}	
 	\caption{Depiction of obtaining a Protein-Protein interaction (PPI) rule from research literature. Source: \cite{kappaPlatform}}
 	\label{fig:kappa}
 \end{figure}
