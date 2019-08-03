@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{kappaPlatform}
+Pierre Boutillier, Mutaamba Maasha, Xing Li, Héctor~F Medina-Abarca, Jean
+  Krivine, Jérôme Feret, Ioana Cristescu, Angus~G Forbes, and Walter Fontana.
+\newblock {The Kappa platform for rule-based modeling}.
+\newblock {\em Bioinformatics}, 34(13):i583--i592, 06 2018.
+
 \bibitem{rule-based-general}
 Lily~A. Chylek, Leonard~A. Harris, Chang-Shung Tung, James~R. Faeder, Carlos~F.
   Lopez, and William~S. Hlavacek.
@@ -87,6 +93,11 @@ Samuel Kerrien, Bruno Aranda, Lionel Breuza, Alan Bridge, Fiona
 \newblock The intact molecular interaction database in 2012.
 \newblock {\em Nucleic acids research}, 40(D1):D841--D846, 2011.
 
+\bibitem{stochsim}
+Nicolas Le~Novere and Thomas~Simon Shimizu.
+\newblock Stochsim: modelling of stochastic biomolecular processes.
+\newblock {\em Bioinformatics}, 17(6):575--576, 2001.
+
 \bibitem{ode}
 Le~Novere N and Endler L.
 \newblock Using chemical kinetics to model biochemical pathways.
@@ -98,6 +109,12 @@ Emanuele Perola, Lee Herman, and Jonathan Weiss.
   druggability.
 \newblock {\em Journal of chemical information and modeling}, 52(4):1027--1038,
   2012.
+
+\bibitem{vcell}
+Boris~M Slepchenko and Leslie~M Loew.
+\newblock Use of virtual cell in studies of cellular dynamics.
+\newblock In {\em International review of cell and molecular biology}, volume
+  283, pages 1--56. Elsevier, 2010.
 
 \bibitem{biogrid}
 Chris Stark, Bobby-Joe Breitkreutz, Andrew Chatr-Aryamontri, Lorrie Boucher,

@@ -1,9 +1,13 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Background}{3}
 \contentsline {section}{\numberline {2.1}Protein-Protein Interaction (PPI) Databases}{4}
-\contentsline {section}{\numberline {2.2}Understanding rule based specification of protein interactions}{5}
-\contentsline {chapter}{\numberline {3}Method}{6}
-\contentsline {chapter}{\numberline {4}Results and Discussion}{7}
-\contentsline {chapter}{\numberline {5}Conclusions}{8}
-\contentsline {section}{\numberline {5.1}Final Reminder}{8}
-\contentsline {chapter}{Bibliography}{9}
+\contentsline {section}{\numberline {2.2}Motivation for constructing the rule based database}{5}
+\contentsline {section}{\numberline {2.3}Understanding rule based specification of protein interactions}{5}
+\contentsline {subsection}{\numberline {2.3.1}General Understanding of rule based languages}{5}
+\contentsline {subsection}{\numberline {2.3.2}Syntax and semantics of Kappa rules}{7}
+\contentsline {section}{\numberline {2.4}Application of Protein Interaction Database}{7}
+\contentsline {chapter}{\numberline {3}Method}{8}
+\contentsline {chapter}{\numberline {4}Results and Discussion}{9}
+\contentsline {chapter}{\numberline {5}Conclusions}{10}
+\contentsline {section}{\numberline {5.1}Final Reminder}{10}
+\contentsline {chapter}{Bibliography}{11}

@@ -3,46 +3,50 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: skeleton.aux
 The style file: plain.bst
 Database file #1: mybibfile.bib
+Repeated entry---line 200 of file mybibfile.bib
+ : @incollection{bioNetGen
+ :                        ,
+I'm skipping whatever remains of this entry
 Warning--can't use both volume and number fields in pathwayAnalysis
-You've used 19 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            614 strings with 8497 characters,
-and the built_in function-call counts, 8529 in all, are:
-= -- 808
-> -- 568
-< -- 6
-+ -- 229
-- -- 206
-* -- 708
-:= -- 1450
-add.period$ -- 62
-call.type$ -- 19
-change.case$ -- 155
+            636 strings with 9060 characters,
+and the built_in function-call counts, 9832 in all, are:
+= -- 935
+> -- 642
+< -- 8
++ -- 258
+- -- 232
+* -- 817
+:= -- 1664
+add.period$ -- 72
+call.type$ -- 22
+change.case$ -- 177
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 260
-empty$ -- 538
-format.name$ -- 206
-if$ -- 1718
+cite$ -- 23
+duplicate$ -- 302
+empty$ -- 630
+format.name$ -- 232
+if$ -- 1988
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 19
-newline$ -- 98
-num.names$ -- 38
-pop$ -- 141
+int.to.str$ -- 22
+missing$ -- 22
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 161
 preamble$ -- 1
-purify$ -- 136
+purify$ -- 155
 quote$ -- 0
-skip$ -- 187
+skip$ -- 216
 stack$ -- 0
-substring$ -- 487
-swap$ -- 60
-text.length$ -- 6
+substring$ -- 573
+swap$ -- 69
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
+type$ -- 88
 warning$ -- 1
-while$ -- 69
-width$ -- 21
-write$ -- 217
-(There was 1 warning)
+while$ -- 81
+width$ -- 24
+write$ -- 252
+(There was 1 error message)
