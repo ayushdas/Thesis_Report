@@ -5,9 +5,10 @@
 \contentsline {section}{\numberline {2.3}Understanding rule based specification of protein interactions}{5}
 \contentsline {subsection}{\numberline {2.3.1}General Understanding of rule based languages}{5}
 \contentsline {subsection}{\numberline {2.3.2}Syntax and semantics of Kappa rules}{7}
-\contentsline {section}{\numberline {2.4}Application of Protein-Protein Interaction Databases}{8}
-\contentsline {chapter}{\numberline {3}Method}{10}
-\contentsline {chapter}{\numberline {4}Results and Discussion}{11}
-\contentsline {chapter}{\numberline {5}Conclusions}{12}
-\contentsline {section}{\numberline {5.1}Final Reminder}{12}
-\contentsline {chapter}{Bibliography}{13}
+\contentsline {subsection}{\numberline {2.3.3}Analysis of KaSim outputs}{8}
+\contentsline {section}{\numberline {2.4}Application of Protein-Protein Interaction Databases}{10}
+\contentsline {chapter}{\numberline {3}Method}{11}
+\contentsline {chapter}{\numberline {4}Results and Discussion}{12}
+\contentsline {chapter}{\numberline {5}Conclusions}{13}
+\contentsline {section}{\numberline {5.1}Final Reminder}{13}
+\contentsline {chapter}{Bibliography}{14}

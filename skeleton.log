@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.10)  3 AUG 2019 23:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.10)  4 AUG 2019 19:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -385,24 +385,30 @@ Missing character: There is no “ in font ptmr7t!
 File: kappa.png Graphic file (type png)
  <use kappa.png>
 Package pdftex.def Info: kappa.png used on input line 181.
-(pdftex.def)             Requested size: 289.81352pt x 142.2647pt.
+(pdftex.def)             Requested size: 412.56848pt x 202.52309pt.
 
-[7]
-Overfull \hbox (6.14954pt too wide) in paragraph at lines 186--186
+[7] <eoi.png, id=49, 612.2875pt x 495.8525pt>
+File: eoi.png Graphic file (type png)
+ <use eoi.png>
+Package pdftex.def Info: eoi.png used on input line 192.
+(pdftex.def)             Requested size: 351.34319pt x 284.53038pt.
+ [8 <./kappa.png>]
+[9 <./eoi.png>]
+Overfull \hbox (6.14954pt too wide) in paragraph at lines 201--201
 []\OT1/phv/b/n/17.28 Application of Protein-Protein In-ter-ac-tion Databases 
  []
 
-[8 <./kappa.png>] [9]
+[10]
 Chapter 3.
-[10
-
-]
-Chapter 4.
 [11
 
 ]
+Chapter 4.
+[12
+
+]
 Chapter 5.
-(./skeleton.bbl [12
+(./skeleton.bbl [13
 
 ]
 Missing character: There is no Ã in font ptmr7t!
@@ -417,7 +423,7 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [13
+ [14
 
 ]
 Missing character: There is no â in font ptmr7t!
@@ -426,29 +432,31 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
- [14] [15]) [16] (./skeleton.aux) ) 
+ [15] [16]) [17] (./skeleton.aux) ) 
 Here is how much of TeX's memory you used:
- 3941 strings out of 493014
- 60031 string characters out of 6133351
- 125613 words of memory out of 5000000
- 7402 multiletter control sequences out of 15000+600000
- 37854 words of font info for 71 fonts, out of 8000000 for 9000
+ 3951 strings out of 493014
+ 60118 string characters out of 6133351
+ 125623 words of memory out of 5000000
+ 7407 multiletter control sequences out of 15000+600000
+ 40345 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,5n,40p,1606b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,6n,40p,1606b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/en
 c/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/
-ucrr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/yfonts-t1/yswab.pfb>
-Output written on skeleton.pdf (20 pages, 512350 bytes).
+onts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/u
+crr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts
+/type1/urw/times/utmri8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/yfonts-t1/yswab.pfb>
+Output written on skeleton.pdf (21 pages, 808749 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 124 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
