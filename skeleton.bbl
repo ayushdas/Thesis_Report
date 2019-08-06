@@ -3,6 +3,15 @@
 \bibitem{kappaURL}
 \url{https://kappalanguage.org/documentation}.
 
+\bibitem{django}
+\url{https://docs.djangoproject.com/en/2.2/}.
+
+\bibitem{Uniprot-Prosite}
+\url{https://www.uniprot.org/database/DB-0084}.
+
+\bibitem{indexing}
+\url{https://dev.mysql.com/doc/refman/8.0/en/optimization-indexes.html}.
+
 \bibitem{kappaPlatform}
 Pierre Boutillier, Mutaamba Maasha, Xing Li, Héctor~F Medina-Abarca, Jean
   Krivine, Jérôme Feret, Ioana Cristescu, Angus~G Forbes, and Walter Fontana.
@@ -145,6 +154,12 @@ Boris~M Slepchenko and Leslie~M Loew.
 \newblock Use of virtual cell in studies of cellular dynamics.
 \newblock In {\em International review of cell and molecular biology}, volume
   283, pages 1--56. Elsevier, 2010.
+
+\bibitem{nfsim}
+Michael~W Sneddon, James~R Faeder, and Thierry Emonet.
+\newblock Efficient modeling, simulation and coarse-graining of biological
+  complexity with nfsim.
+\newblock {\em Nature methods}, 8(2):177, 2011.
 
 \bibitem{biogrid}
 Chris Stark, Bobby-Joe Breitkreutz, Andrew Chatr-Aryamontri, Lorrie Boucher,
