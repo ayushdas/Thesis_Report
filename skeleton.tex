@@ -386,6 +386,82 @@ The main folder is called PPI\_DB, which contains within it the following sub-fo
  \end{enumerate}
 	
 \section{Web Application for accessing the stored procedures}
+This section provides a walk-through of the django app file structure and the important files for the project. It also explains the procedure to run the django app and retrieve the PPI rules. We also explain the functionality of the user interface (UI) in this section.
+\subsection {Folder Structure and files}
+Files for the web application are contained in the django-app folder within the source code hosted on Github repository, \cite{sourceCode}. The root folder for django app is called djangonautic and within it we find the  subfolders called djanjonautic, ppi and templates. This folder also contains the manage.py file which is automatically generated while creating the django app and is used to run tasks like making database migrations and starting the web server. 
+
+Within the djangonautic folder contains an important file called settings.py. This contains important information such as the installed apps and database connection details. In case the django-app needs to be extended then the installed app need to be registered in the INSTALLED \_APPS section. The database details can also be modified from the settings.py file in the DATABASES section.
+
+The ppi folder contains the files and templates relevant to extracting and displaying the PPI information in the webpage. When the url is invoked, in order to serve the client request the django server first matches the url with the url patterns available in the urls.py file located in this folder. Once the url pattern is matched, the corresponding function from the views.py file is invoked. Within the functions of the views.py file the database call to the relevant stored procedure is made. Once the result is returned by the database the relevant template from the ppi/templates folder is invoked and the result is rendered onto the screen. The static folder within the ppi/templates contains the javascript, css and fonts obtained from the library \cite{dataTables}, are used to create and display the PPI rules in the UI. 
+\subsection {Running the web application}
+In order to run the web application the following steps need to be performed:
+ \begin{enumerate}
+ 	\item  The SQL server in which the database is hosted should be in running state. In MAC OSX this can be verified by navigating to the System Preferences $\to$ MySQL and ensuring that the MySQL server is running. 
+ 	\item Navigate to the folder django\_app $\to$ djangonautic and run the following command to start the server.\\
+ 	python manage.py runserver
+ \end{enumerate}
+\subsection {Get PPI rules based on agent name}
+\begin{enumerate}
+	\item In order to access the PPI rules based on Agent Name, enter the following URL in the web browser: http://127.0.0.1:8000/ppi/AgentNameForm/.
+	\item Enter the agent name in the text box provided and click on submit as shown in the figure \ref{fig:agentNameForm}. (Note: The agent name is case sensitive). Internally the django app makes a connection to the database and invokes the GetRulesFromAgentName stored procedure and passes the agent name as argument to it.
+	\item The retrieved PPI rules will be visible in the next page as shown in the figure \ref{fig:agentNameRules}. In case there are no matching PPI rules then a message is displayed on the screen to inform the user.
+\end{enumerate}
+  \begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{AgentNameForm.png}	
+	\caption{Form to accept the agent name.}
+	\label{fig:agentNameForm}		
+\end{figure}
+
+  \begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{AgentNameRules.png}	
+	\caption{The rules retrieved based on the domain names provided in the agent name form.}
+	\label{fig:agentNameRules}		
+\end{figure}
+
+\subsection {Get PPI rules based on domain names}
+\begin{enumerate}
+	\item In order to access the PPI rules based on a pair of domain names, enter the following URL in the web browser: http://127.0.0.1:8000/ppi/DomainNameForm/
+	\item Enter the domain names in the text boxes provided and click on submit, as shown in the figure \ref{fig:domainNameForm}. (Note: The domain names are case sensitive). Internally the django app makes a connection to the database and invokes the GetRulesFromDomainNamePair stored procedure and passes the domain names as arguments to it.
+	\item The retrieved PPI rules will be visible in the next page as shown in the figure \ref{fig:domainNameRules}. In case there are no matching PPI rules then a message is displayed on the screen to inform the user.
+\end{enumerate}
+	 \begin{figure}[H]
+		\centering
+		\captionsetup{justification=centering}
+		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{DomainNameForm.png}	
+		\caption{Form to accept the domain names.}
+		\label{fig:domainNameForm}		
+	\end{figure}
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{DomainNameRules.png}	
+	\caption{The rules retrieved based on the domain names provided in the domain names form.}
+	\label{fig:domainNameRules}		
+\end{figure}
+
+\subsection {User Interface (UI) functionality}
+The buttons in the user interface have been created with the help of the DataTables libraray \cite{dataTables}.These UI options are helpful, as the retrieved results can be processed and fed into the  kappa simulator for visualization of the protein interactions. A description of the buttons in the figure \ref{fig:UI} is as follows:
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{UI.png}	
+	\caption{A closer view at the user interface (UI) buttons.}
+	\label{fig:UI}		
+\end{figure}
+\begin{enumerate}
+	\item Show `n' rows: Provides the option of displaying 10, 25, 50, 100 or all the rows.
+	\item Copy: Allows the table to be copied to the clipboard.
+	\item Excel: Allows the table to be exported to an excel sheet.
+	\item CSV: Allows the table to be exported to a comma separated file.
+	\item Print: Allows the user to print the retrieved results.
+	\item Column visibility: Allows the user to decide which columns are to be visible. This can be useful while exporting or saving only the required results.
+	\item Arrow buttons beside the field names: Allow the user to sort the results in numerical order in case of a numerical field or alphabetical order in case of a text field.
+	\item Search: The search button allows the user to search over the entire table based on a search key.
+\end{enumerate}
 \section{Deployment steps}
 \subsection{Database Scripts}
 \subsection{Web Application}

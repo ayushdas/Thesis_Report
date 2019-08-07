@@ -28,17 +28,22 @@
 \contentsline {subsection}{\numberline {3.4.1}Project folder source}{19}
 \contentsline {subsection}{\numberline {3.4.2}Project folder structure and files}{19}
 \contentsline {section}{\numberline {3.5}Web Application for accessing the stored procedures}{22}
-\contentsline {section}{\numberline {3.6}Deployment steps}{22}
-\contentsline {subsection}{\numberline {3.6.1}Database Scripts}{22}
-\contentsline {subsection}{\numberline {3.6.2}Web Application}{22}
-\contentsline {chapter}{\numberline {4}Results and Discussion}{23}
-\contentsline {chapter}{\numberline {5}Conclusions}{24}
-\contentsline {section}{\numberline {5.1}Final Reminder}{24}
-\contentsline {chapter}{Bibliography}{25}
-\contentsline {chapter}{\numberline {A}Software Version}{29}
-\contentsline {section}{\numberline {A.1}Operating System}{29}
-\contentsline {section}{\numberline {A.2}MySQL Version/ Client Version}{29}
-\contentsline {section}{\numberline {A.3}Python Version}{29}
-\contentsline {section}{\numberline {A.4}MySQL Connector Version in Python scripts}{29}
-\contentsline {section}{\numberline {A.5}Django Version}{29}
-\contentsline {section}{\numberline {A.6}Data Tables Version}{29}
+\contentsline {subsection}{\numberline {3.5.1}Folder Structure and files}{22}
+\contentsline {subsection}{\numberline {3.5.2}Running the web application}{23}
+\contentsline {subsection}{\numberline {3.5.3}Get PPI rules based on agent name}{23}
+\contentsline {subsection}{\numberline {3.5.4}Get PPI rules based on domain names}{25}
+\contentsline {subsection}{\numberline {3.5.5}User Interface (UI) functionality}{26}
+\contentsline {section}{\numberline {3.6}Deployment steps}{27}
+\contentsline {subsection}{\numberline {3.6.1}Database Scripts}{27}
+\contentsline {subsection}{\numberline {3.6.2}Web Application}{27}
+\contentsline {chapter}{\numberline {4}Results and Discussion}{28}
+\contentsline {chapter}{\numberline {5}Conclusions}{29}
+\contentsline {section}{\numberline {5.1}Final Reminder}{29}
+\contentsline {chapter}{Bibliography}{30}
+\contentsline {chapter}{\numberline {A}Software Version}{34}
+\contentsline {section}{\numberline {A.1}Operating System}{34}
+\contentsline {section}{\numberline {A.2}MySQL Version/ Client Version}{34}
+\contentsline {section}{\numberline {A.3}Python Version}{34}
+\contentsline {section}{\numberline {A.4}MySQL Connector Version in Python scripts}{34}
+\contentsline {section}{\numberline {A.5}Django Version}{34}
+\contentsline {section}{\numberline {A.6}Data Tables Version}{34}

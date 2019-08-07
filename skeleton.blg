@@ -13,47 +13,48 @@ Warning--to sort, need author or key in vd
 Warning--to sort, need author or key in Uniprot-Prosite
 Warning--to sort, need author or key in indexing
 Warning--to sort, need author or key in sourceCode
+Warning--to sort, need author or key in dataTables
 Warning--can't use both volume and number fields in pathwayAnalysis
 Warning--can't use both volume and number fields in ruleMultiscale
-You've used 33 entries,
+You've used 34 entries,
             2118 wiz_defined-function locations,
-            671 strings with 10270 characters,
-and the built_in function-call counts, 12811 in all, are:
-= -- 1210
-> -- 778
+            674 strings with 10319 characters,
+and the built_in function-call counts, 12960 in all, are:
+= -- 1223
+> -- 779
 < -- 11
-+ -- 315
++ -- 316
 - -- 278
-* -- 1012
-:= -- 2095
-add.period$ -- 96
-call.type$ -- 33
-change.case$ -- 227
+* -- 1017
+:= -- 2109
+add.period$ -- 97
+call.type$ -- 34
+change.case$ -- 229
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 419
-empty$ -- 915
+cite$ -- 43
+duplicate$ -- 426
+empty$ -- 938
 format.name$ -- 278
-if$ -- 2652
+if$ -- 2690
 int.to.chr$ -- 0
-int.to.str$ -- 33
+int.to.str$ -- 34
 missing$ -- 27
-newline$ -- 156
+newline$ -- 159
 num.names$ -- 54
-pop$ -- 258
+pop$ -- 267
 preamble$ -- 1
-purify$ -- 200
+purify$ -- 202
 quote$ -- 0
-skip$ -- 313
+skip$ -- 322
 stack$ -- 0
-substring$ -- 691
-swap$ -- 94
+substring$ -- 696
+swap$ -- 95
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 132
-warning$ -- 8
+type$ -- 136
+warning$ -- 9
 while$ -- 98
-width$ -- 35
-write$ -- 340
+width$ -- 36
+write$ -- 345
 (There was 1 error message)

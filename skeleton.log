@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.10)  7 AUG 2019 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.10)  7 AUG 2019 23:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -438,13 +438,44 @@ Overfull \hbox (6.56757pt too wide) in paragraph at lines 373--374
 PPI Database.
  []
 
-[21] [22]
+[21] [22] <AgentNameForm.png, id=107, 1284.8pt x 803.0pt>
+File: AgentNameForm.png Graphic file (type png)
+
+<use AgentNameForm.png>
+Package pdftex.def Info: AgentNameForm.png used on input line 412.
+(pdftex.def)             Requested size: 412.55592pt x 257.84744pt.
+ [23] <AgentNameRules.png, id=111, 1284.8pt x 803.0pt>
+File: AgentNameRules.png Graphic file (type png)
+
+<use AgentNameRules.png>
+Package pdftex.def Info: AgentNameRules.png used on input line 420.
+(pdftex.def)             Requested size: 412.55592pt x 257.84744pt.
+ [24 <./AgentNameForm.png> <./AgentNameRules.png>]
+<DomainNameForm.png, id=117, 1284.8pt x 803.0pt>
+File: DomainNameForm.png Graphic file (type png)
+ <use DomainNameForm.png>
+Package pdftex.def Info: DomainNameForm.png used on input line 434.
+(pdftex.def)             Requested size: 412.55592pt x 257.84744pt.
+
+<DomainNameRules.png, id=118, 1284.8pt x 803.0pt>
+File: DomainNameRules.png Graphic file (type png)
+ <use DomainNameRules.png>
+Package pdftex.def Info: DomainNameRules.png used on input line 441.
+(pdftex.def)             Requested size: 412.55592pt x 257.84744pt.
+
+[25 <./DomainNameForm.png>] <UI.png, id=123, 1283.79625pt x 237.88875pt>
+File: UI.png Graphic file (type png)
+
+<use UI.png>
+Package pdftex.def Info: UI.png used on input line 451.
+(pdftex.def)             Requested size: 412.56662pt x 76.449pt.
+ [26 <./DomainNameRules.png> <./UI.png>] [27]
 Chapter 4.
-[23
+[28
 
 ]
 Chapter 5.
-(./skeleton.bbl [24
+(./skeleton.bbl [29
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
@@ -464,7 +495,7 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-[25
+[30
 
 ]
 Missing character: There is no â in font ptmr7t!
@@ -473,16 +504,16 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
- [26] [27]) [28]
+ [31] [32]) [33]
 Appendix A.
-[29
+[34
 
 ] (./skeleton.aux) ) 
 Here is how much of TeX's memory you used:
- 4331 strings out of 493014
- 66010 string characters out of 6133351
- 133085 words of memory out of 5000000
- 7781 multiletter control sequences out of 15000+600000
+ 4362 strings out of 493014
+ 66595 string characters out of 6133351
+ 133144 words of memory out of 5000000
+ 7807 multiletter control sequences out of 15000+600000
  41442 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,6n,40p,1606b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -498,10 +529,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/yfonts-t1/
 yswab.pfb>
-Output written on skeleton.pdf (34 pages, 1104042 bytes).
+Output written on skeleton.pdf (39 pages, 1774944 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 196 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
