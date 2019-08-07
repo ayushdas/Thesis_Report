@@ -9,49 +9,51 @@ Repeated entry---line 200 of file mybibfile.bib
 I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in kappaURL
 Warning--to sort, need author or key in django
+Warning--to sort, need author or key in vd
 Warning--to sort, need author or key in Uniprot-Prosite
 Warning--to sort, need author or key in indexing
+Warning--to sort, need author or key in sourceCode
 Warning--can't use both volume and number fields in pathwayAnalysis
 Warning--can't use both volume and number fields in ruleMultiscale
-You've used 31 entries,
+You've used 33 entries,
             2118 wiz_defined-function locations,
-            666 strings with 10170 characters,
-and the built_in function-call counts, 12513 in all, are:
-= -- 1184
-> -- 776
+            671 strings with 10270 characters,
+and the built_in function-call counts, 12811 in all, are:
+= -- 1210
+> -- 778
 < -- 11
-+ -- 313
++ -- 315
 - -- 278
-* -- 1002
-:= -- 2067
-add.period$ -- 94
-call.type$ -- 31
-change.case$ -- 223
+* -- 1012
+:= -- 2095
+add.period$ -- 96
+call.type$ -- 33
+change.case$ -- 227
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 405
-empty$ -- 869
+cite$ -- 41
+duplicate$ -- 419
+empty$ -- 915
 format.name$ -- 278
-if$ -- 2576
+if$ -- 2652
 int.to.chr$ -- 0
-int.to.str$ -- 31
+int.to.str$ -- 33
 missing$ -- 27
-newline$ -- 150
+newline$ -- 156
 num.names$ -- 54
-pop$ -- 240
+pop$ -- 258
 preamble$ -- 1
-purify$ -- 196
+purify$ -- 200
 quote$ -- 0
-skip$ -- 295
+skip$ -- 313
 stack$ -- 0
-substring$ -- 681
-swap$ -- 92
+substring$ -- 691
+swap$ -- 94
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 124
-warning$ -- 6
+type$ -- 132
+warning$ -- 8
 while$ -- 98
-width$ -- 33
-write$ -- 330
+width$ -- 35
+write$ -- 340
 (There was 1 error message)

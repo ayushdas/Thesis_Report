@@ -215,7 +215,7 @@ The databse for PPIs stored in a rule based format will have several application
 All these research applications help in substantiating the claim that database for storing PPI in a rule format is an important tool for the study the protein complexes, drug discovery and pathway analysis aimed to improve our understanding of complex biological systems.
  
 
-\chapter{Method}
+\chapter{Methodology}
 This chapter includes the methodology adopted for the creation of rule-based Protein-Protein Interaction (PPI) database and the steps to add a new rule to it. It also contains a description of the stored procedures used to extract protein interaction rules based on either agent name or domain name pair. The source code for this project is available on an online repository (Github). This chapter contains a description of the files and folder structure within it. 
 
 As a part of this project, a web application using Django \cite{django} was created to access the PPI rules by calling the stored procedures from within it. Chapter 3 includes the design and implementation details for the web application used to access the PPI rules. The PPI rules can be accessed from the web application, either based on the agent name or a domain name pair. 
@@ -233,7 +233,7 @@ To construct the PPI database it was decided to structure the data into separate
   	\centering
   	\captionsetup{justification=centering}
   	\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{er.png}	
-  	\caption{ER Diagram of the database}
+  	\caption{Database ER Diagram created using software Visual Paradigm \cite{vd}}
   	\label{fig:er}		
   \end{figure}
   In Fig \ref{fig:er}, the dotted lines depict the primary-foreign key relations between the tables. The green box depicts the names of the stored procedures that are part of the database.
@@ -312,7 +312,79 @@ The database structure is optimized for fast read operations. This is because, b
 	\subsection{Rule-Domain-Agent}
 	After following the steps laid out in Rule subsection, the three pair tuple/s consisting of the rule\_id, agent\_id for each of the agents in the rule and the domain\_id for each of the domains that associate with the corresponding agent within rule, need to be entered in the rule\_domain\_agent table as (rule id, domain id, agent id).
 \section{Description of Stored Procedures}
-\section{Description of the Project Folder and Files}
+ In Fig \ref{fig:er}, the green box displays stored procedures defined within the database. The two stored procedures created are GetRulesFromAgentName and GetRulesFromDomainNamePair. The expected input, output and algorithm for each of the stored procedure is mentioned in the following subsections.
+ \subsection{GetRulesFromAgentName}
+ \textbf{Input:} An agent name (data type: text).\\
+ \textbf{Output:} PPI rules in which the agent name, provided as an input occurs.\\ 
+ \textbf{Algorithm} 
+ \begin{enumerate}
+ 	\item The agent id corresponding to the agent name is obtained from the agent table. 
+ 	\item A list of the rules, in the form of rule ids occurring along with the agent id (obtained in step 1) is extracted from the rule\_domain\_agent table. This is a list of distinct rule ids, which implies that none of the rule ids are repeated in the output.
+ 	\item Using the list of distinct rule ids, the rules are extracted from the rule table and provided as output of the stored procedure.
+ \end{enumerate}
+ \subsection{GetRulesFromDomainNamePair}
+  \textbf{Input:} Two domain names (data type of each being: text).\\
+ \textbf{Output:} PPI rules in which both the domain names, provided as an input occurs.\\ 
+ \textbf{Algorithm}
+  \begin{enumerate}
+ \item  The domain id for each of the domains are extracted from the domain table and stored in two separate variables within the stored procedure, called domain1 and domain2. 
+\item  From the table, rule\_domain\_agent those rule ids are extracted that co-occur with the domain2.
+\item  The rule ids are extracted which co-occur with domain1 and also occur in the list of rule ids extracted in the previous step. Hence implying that the rules ids occuring in this step are the rules that co-occur with domain1 and domain2. This is a distinct list of rule ids. 
+\item Using the list of distinct rule ids, the rules are extracted from the rule table and provided as output of the stored procedure.
+ \end{enumerate}
+\section{Description of the project folder and its files}
+\subsection{Project folder source}
+This project is hosted on Github, as a public repository in the link \cite{sourceCode}, and is open source.
+\subsection{Project folder structure and files}
+The main folder is called PPI\_DB, which contains within it the following sub-folders:
+ \begin{enumerate}
+ 	\item django-app: Contains files pertaining to the web application for accessing the PPI rules. The relevant files and folder structure are elucidated in the next section.
+ 	\item Parser: Contains files pertaining to extracting the agents, domains and PPI rules from the dataset (rule\_baseV0.2.xlsx). This folder has the following files and sub-folder.
+ 	\begin{enumerate}
+ 		\item PARSER\_POPULATE\_TABLE\_AGENT.py: Accesses the Agents Sheet of the dataset and generates the table insertion script for the  SQL table, agent.
+ 		\item PARSER\_POPULATE\_TABLE\_DOMAIN.py: Accesses the Agents Sheet of the dataset and generates the table insertion script for the SQL table, domain.
+ 		\item PARSER\_POPULATE\_TABLE\_RULE.py: Accesses the Rules Sheet of the dataset and generates the table insertion script for the SQL table, rule.
+ 		\item Extractors: This folder contains python scripts used to obtain the agents, domains, agent-domain pairs and kinetic constants for each of the PPI rules, from the Rules Sheet of the dataset. These extracted columns are then appended to the Rules Sheet of the dataset, as additional columns and included into the SQL rule table. The `meta data columns' like agents, domain and agent-domain pairs provide additional information about the rules.
+ 		\item DB\_POPULATE\_TABLE\_DOMAIN\_AGENT.py: This script connects to the database using the credentials mentioned within the script and generates the table insertion script for the SQL table, domain\_agent. 
+ 		
+ 		To summarize, this script works by first obtaining a row from the domain table created in step (b). The agent\_name field in the row gives names of all the agents to which the domain associates itself with. The id of each of these agents is obtained from the agents table and the id of the domain is included in the row extracted from the domain table. Then insert table commands of the form (domain\_id, agent\_id) are generated, to populate the domain\_agent table.
+ 		\item DB\_POPULATE\_TABLE\_RULE\_DOMAIN\_AGENT.py: This script connects to the database using the credentials mentioned within the script and generates the table insertion script for the SQL table, rule\_domain\_agent. 
+ 		
+ 		To summarize, this script works by first obtaining a row from the rule table created in step (c). The agent\_domain\_pairs field in the row gives all the agent-domain pairs within that PPI rule. The id of each of these agents is obtained from the agents table and the id of the domain is obtained from the domain table (both obtained by querying from the database). Then insert table commands of the form (rule\_id, domain\_id, agent\_id) are generated, to populate the rule\_domain\_agent table.
+ 	\end{enumerate}
+ 	\item Stored Procedure: Contains two files that define stored procedures.
+ 	\begin{enumerate}
+ 		\item RULES\_FROM\_AGENT\_NAME.sql: Defines the stored procedure that returns the PPI rules based on the agent name as input.
+ 		\item RULES\_FROM\_DOMAIN\_NAME\_PAIR.sql: Defines the stored procedure that returns the PPI rules based on the pair of domain names as input.
+ 	\end{enumerate}
+ 
+ 	\item Table Populate Scripts: Contains database scripts that are used to populate the PPI database. These table insertion scripts are written in MySQL format and tested using the MySQL client called MySQLWorkbench. It contains the following files:
+ 	 	\begin{enumerate}
+ 		\item AGENT.sql: Script to populate the agent table.
+		\item DOMAIN.sql: An initial Script to populate the domain table. (included in the projects file only for reference)
+		\item DOMAIN\_V2.sql: Script to populate the domain table.
+		\item RULE.sql: Script to populate the rule table.
+		\item DOMAIN\_AGENT.sql: Script to populate the domain\_agent table.
+		\item RULE\_DOMAIN\_AGENT.sql:  Script to populate the rule\_domain\_agent table.
+ 	\end{enumerate}
+ 
+ 	\item Tables/Database Creation Scripts: Contains the database scripts used to define and create the database and tables within it. These scripts are written in MySQL format and tested using the MySQL client called MySQLWorkbench. It contains the following files:
+ 	 	 	\begin{enumerate}
+ 		\item CREATE\_DATABASE\_PPI.sql: Script to define and create the PPI Database. This serves like a container to store the PPI database tables.
+ 		\item CREATE\_TABLE\_AGENT.sql: Script to define and create the agent table.
+ 		\item CREATE\_TABLE\_DOMAIN.sql: Script to define and create the domain table.
+ 		\item CREATE\_TABLE\_RULE.sql: Script to define and create the rule table.
+ 		\item CREATE\_TABLE\_DOMAIN\_AGENT.sql: Script to define and create the domain\_agent table.
+ 		\item CREATE\_TABLE\_RULE\_DOMAIN\_AGENT.sql:  Script to define and create the rule\_domain\_agent table.
+ 	\end{enumerate}
+ 
+ \item Rectified Rules:  Verification steps were adopted after the initial population of the database. A report was generated based on any discrepancies within the data in the database. For example, it is possible that while inserting a rule it is observed that the domain that the agent occurs with was not entered in the database before as it was not observed in the Agents sheet, in the dataset. Based on the report and subsequent discussions the table population scripts were updated. Moe information regarding the verification pipeline is presented in the `Results and Discussion Section'. This folder contains the following two files:
+    \begin{enumerate}
+   	\item problematic\_agents\_domains.txt: The initial report on the the observed discrepancies.
+   	\item rule\_baseV0.2\_fixed.xlsx: The dataset with the updated values for agents, domains and rules based on the discrepancies reported in\\ problematic\_agents\_domains.txt. It is an updated version of the dataset contained in the Parser folder.
+   \end{enumerate}
+ \end{enumerate}
+	
 \section{Web Application for accessing the stored procedures}
 \section{Deployment steps}
 \subsection{Database Scripts}

@@ -6,11 +6,17 @@
 \bibitem{django}
 \url{https://docs.djangoproject.com/en/2.2/}.
 
+\bibitem{vd}
+\url{https://www.visual-paradigm.com/}.
+
 \bibitem{Uniprot-Prosite}
 \url{https://www.uniprot.org/database/DB-0084}.
 
 \bibitem{indexing}
 \url{https://dev.mysql.com/doc/refman/8.0/en/optimization-indexes.html}.
+
+\bibitem{sourceCode}
+\url{https://github.com/ayushdas/PPI_DB}.
 
 \bibitem{kappaPlatform}
 Pierre Boutillier, Mutaamba Maasha, Xing Li, Héctor~F Medina-Abarca, Jean
