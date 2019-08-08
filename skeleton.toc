@@ -36,7 +36,7 @@
 \contentsline {section}{\numberline {3.6}Deployment steps}{27}
 \contentsline {subsection}{\numberline {3.6.1}Database Scripts}{27}
 \contentsline {subsection}{\numberline {3.6.2}Web Application}{28}
-\contentsline {chapter}{\numberline {4}Results and Discussion}{29}
+\contentsline {chapter}{\numberline {4}Verification and Results}{29}
 \contentsline {chapter}{\numberline {5}Conclusions}{30}
 \contentsline {section}{\numberline {5.1}Final Reminder}{30}
 \contentsline {chapter}{Bibliography}{31}
