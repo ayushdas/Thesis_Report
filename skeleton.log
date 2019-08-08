@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.10)  7 AUG 2019 23:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.10)  8 AUG 2019 11:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -469,13 +469,31 @@ File: UI.png Graphic file (type png)
 <use UI.png>
 Package pdftex.def Info: UI.png used on input line 451.
 (pdftex.def)             Requested size: 412.56662pt x 76.449pt.
- [26 <./DomainNameRules.png> <./UI.png>] [27]
+ [26 <./DomainNameRules.png> <./UI.png>]
+Overfull \hbox (1.60938pt too wide) in paragraph at lines 471--472
+[]\OT1/ptm/m/n/12 Navigate to the Ta-bles:Database Cre-ation Scripts folder lo-
+cated within the project
+ []
+
+
+Overfull \hbox (17.34285pt too wide) in paragraph at lines 473--474
+[]\OT1/ptm/m/n/12 Execute the re-main-ing scripts in the fol-low-ing or-der, CR
+E-ATE[]TABLE[]AGENT.sql,
+ []
+
+
+Overfull \hbox (14.29558pt too wide) in paragraph at lines 473--474
+\OT1/ptm/m/n/12 CRE-ATE[]TABLE[]DOMAIN.sql, CRE-ATE[]TABLE[]DOMAIN[]AGENT.sql, 
+CRE-
+ []
+
+[27] [28]
 Chapter 4.
-[28
+[29
 
 ]
 Chapter 5.
-(./skeleton.bbl [29
+(./skeleton.bbl [30
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
@@ -495,7 +513,7 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-[30
+[31
 
 ]
 Missing character: There is no â in font ptmr7t!
@@ -504,9 +522,9 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
- [31] [32]) [33]
+ [32] [33]) [34]
 Appendix A.
-[34
+[35
 
 ] (./skeleton.aux) ) 
 Here is how much of TeX's memory you used:
@@ -529,10 +547,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/yfonts-t1/
 yswab.pfb>
-Output written on skeleton.pdf (39 pages, 1774944 bytes).
+Output written on skeleton.pdf (40 pages, 1776881 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
+ 199 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

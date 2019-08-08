@@ -35,15 +35,15 @@
 \contentsline {subsection}{\numberline {3.5.5}User Interface (UI) functionality}{26}
 \contentsline {section}{\numberline {3.6}Deployment steps}{27}
 \contentsline {subsection}{\numberline {3.6.1}Database Scripts}{27}
-\contentsline {subsection}{\numberline {3.6.2}Web Application}{27}
-\contentsline {chapter}{\numberline {4}Results and Discussion}{28}
-\contentsline {chapter}{\numberline {5}Conclusions}{29}
-\contentsline {section}{\numberline {5.1}Final Reminder}{29}
-\contentsline {chapter}{Bibliography}{30}
-\contentsline {chapter}{\numberline {A}Software Version}{34}
-\contentsline {section}{\numberline {A.1}Operating System}{34}
-\contentsline {section}{\numberline {A.2}MySQL Version/ Client Version}{34}
-\contentsline {section}{\numberline {A.3}Python Version}{34}
-\contentsline {section}{\numberline {A.4}MySQL Connector Version in Python scripts}{34}
-\contentsline {section}{\numberline {A.5}Django Version}{34}
-\contentsline {section}{\numberline {A.6}Data Tables Version}{34}
+\contentsline {subsection}{\numberline {3.6.2}Web Application}{28}
+\contentsline {chapter}{\numberline {4}Results and Discussion}{29}
+\contentsline {chapter}{\numberline {5}Conclusions}{30}
+\contentsline {section}{\numberline {5.1}Final Reminder}{30}
+\contentsline {chapter}{Bibliography}{31}
+\contentsline {chapter}{\numberline {A}Software Version}{35}
+\contentsline {section}{\numberline {A.1}Operating System}{35}
+\contentsline {section}{\numberline {A.2}MySQL Version/ Client Version}{35}
+\contentsline {section}{\numberline {A.3}Python Version}{35}
+\contentsline {section}{\numberline {A.4}MySQL Connector Version in Python scripts}{35}
+\contentsline {section}{\numberline {A.5}Django Version}{35}
+\contentsline {section}{\numberline {A.6}Data Tables Version}{35}

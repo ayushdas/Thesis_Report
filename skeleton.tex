@@ -464,8 +464,28 @@ The buttons in the user interface have been created with the help of the DataTab
 \end{enumerate}
 \section{Deployment steps}
 \subsection{Database Scripts}
+ The SQL scripts were tested on MySQL server using the client MySQLWorkbench. The respective versions can be found in Appendix A. In order to deploy the database scripts onto a database server the following steps need to be followed.
+ \begin{enumerate}
+ 	\item Create a user account within the database server (if not created already).
+ 	\item Login to the user account within the database server.
+ 	\item Navigate to the Tables:Database Creation Scripts folder located within the project folder hosted on Github. 
+ 	\item Execute the CREATE\_DATABASE\_PPI.sql SQL script in the MySQL client, to create the PPI database.
+ 	\item Execute the remaining scripts in the following order, CREATE\_TABLE\_AGENT.sql, CREATE\_TABLE\_DOMAIN.sql, CREATE\_TABLE\_DOMAIN\_AGENT.sql, CREATE\_TABLE\_RULE.sql and CREATE\_TABLE\_RULE\_DOMAIN\_AGENT.sql.
+ 	\item Navigate to the Table Populate Scripts folder located within the project folder hosted in Github.
+ 	\item Execute the SQL scripts in the following order AGENT.sql, DOMAIN\_V2.sql, RULE.sql, DOMAIN\_AGENT.sql and RULE\_DOMAIN\_AGENT.sql.
+ \end{enumerate}
 \subsection{Web Application}
-
+To deploy the web application onto a web server navigate to the django\_app folder within the project folder hosted on Github.
+\begin{enumerate}
+	\item Navigate to the file django\_app/djangonautic/djangonautic/settings.py, update the database credentials with the ones created in the previous section, in the DATABASE section of the code and save it.
+	\item Navigate to the folder django\_app/djangonautic/ and run the following commands to synchronize the data models within the django application, with the database:\\
+	python manage.py migrate \\
+	python manage.py makemigrations
+	\item After synchronizing the data model, start the web server by running the following command:\\
+	python manage.py runserver\\
+	and acess the URLs for retrieving the PPIs based on agent name or domain names through a web browser.	
+\end{enumerate}
+The web application was tested on the web browsers Safari, Google Chrome and Mozilla Firefox.
 \chapter{Results and Discussion}
 
 \chapter{Conclusions}
