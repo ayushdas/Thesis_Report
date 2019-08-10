@@ -487,23 +487,166 @@ To deploy the web application onto a web server navigate to the django\_app fold
 \end{enumerate}
 The web application was tested on the web browsers Safari, Google Chrome and Mozilla Firefox.
 \chapter{Verification and Results}
+This chapter presents the verification techniques adopted, to ensure correctness in several parts of the project. These include aspects of correctness in database creation, values retrieved by the stored procedures and the displayed results within the UI. 
+\section{Verification pipeline for database entries}
+This section details the verification pipeline used to ensure correctness of data stored within the PPI database. This is verified using the following reasoning and python scripts within the project folder.
+\begin{enumerate}
+	\item The Agent table is created by parsing the Agents sheet within the provided dataset (Excel sheet).
+	\item The domain table is then created by parsing the agents sheet within the provided dataset (Excel sheet). Hence the agent table and the domain table is obtained.
+	\item The rule table was then created by parsing the Rules sheet within the provided dataset (Excel Sheet). The rules were pre-processed to obtain the agents, domains and agent-domain pairs. These were added as additional columns in the Excel sheet and are visible in the Processed Excel Sheets folder. The additional columns are also visible in the rule table of the database.
+	\item The correctness of parsing the rules was manually verified to ensure that they were free from errors. 
+	\item We next proceed to create the domain\_agent table using the script\\ DB\_POPULATE\_TABLE\_DOMAIN\_AGENT.py.\\ The script connects to the database and obtains a domain by querying the domain table. It acquires its corresponding id and all the associated agent names from the domain table. 
+	\item This script then queries the database for each of the agent names associated with that particular domain. 
+	\item In case it does not find the agent name in the agent table of the database, it reports this discrepancy.
+	\item In case it finds the agent name in the agent table of the database then it proceeds to create the SQL entry for the domain\_agent table.\\ Note: The domain id was already obtained in step 3. 
+	\item We next proceed to create the rule\_domain\_agent table using the script\\ DB\_POPULATE\_TABLE\_RULE\_DOMAIN\_AGENT.py.\\ The script connects to the database using MySQL connector and for each rule it obtains the agents and domains present within the rule.
+	\item  It then connects to the database and queries if each of the agent names exist within the database. In case it does not, then it reports the discrepancy with the prefix Problem in AGENT\_NAME. 
+	\item For each of the domains extracted it checks whether the domain name exists in the domain database. In case the domain name does not exist, then it reports this discrepancy with the prefix Problem in DOMAIN\_NAME. These discrepancies are written to a file named problematic\_agents\_domains.txt.
+	\item The script then proceeds to verify that an agent and domain extracted from the rule, have the necessary entry in the domain\_agent relation. In case, it does not find this entry, then it reports this discrepancy.
+	\item  In case no discrepancies were observed then, it implies that the agent name occurs in the agent database and the domain name exists in the domain database. Also the relevant connection between the domain and agent is found in the domain\_agent relation.
+	\item The MySQL table entry for the relation rule\_domain\_agent for the observed rule, domain and agent is created. This procedure is repeated for each of the agents and associated domains within the rule and for every rule.	
+	\item Finally, the discrepancies were examined and discussed with the  supervisor. Based on inputs provided the discrepancies were resolved and the database loading scripts were updated to accommodate the changes.
+\end{enumerate}
+\section{Verification of stored procedure results}
+Two stored procedures were created as part of the project. These are useful in retrieving the PPI rules based on the criteria defined in the following sub-sections.
+\subsection{GetRulesFromAgentName}
+The purpose of this stored procedure is to return the PPI rules which contains the agent name (provided as an input). To verify that the defined stored procedure behaves as expected, test cases were tried and the outputs were verified. Some of these test cases are as follows: 
+\begin{enumerate}
+	\item 
+	\begin{itemize}
+		\item 	The stored procedure is called with the agent name `CaM',\\
+		using the command, call GetRulesFromAgentName(`CaM') \\
+		 from MySQL workbench.
+		 \item 	The expected output is the PPI rules, containing the agent CaM within it.
+		 \item 	The output obtained from the database contained 14 rows. A snippet of the output is shown below, in the figure \ref{fig:AgentNameOutput1}. Each of these PPI rules were verified to contain the agent name CaM within it.\\
+	\end{itemize}	
+	\begin{figure}[H]
+		\centering
+		\captionsetup{justification=centering}
+		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{AgentNameOutput1.png}	
+		\caption{The retrieved rules from the stored procedure called with the argument `Cam'}
+		\label{fig:AgentNameOutput1}		
+	\end{figure}
+
+	\item 
+	\begin{itemize}
+		\item 	The stored procedure is called with agent name `SynGAPa',\\
+		using the command, call GetRulesFromAgentName(`SynGAPa')\\
+		from MySQL workbench.
+		\item The expected output is the PPI rules, containing the agent SynGAPa.
+		\item The output obtained from the database contained 6 rows. A snippet of the output is shown in the figure \ref{fig:AgentNameOutput2}. Each of these PPI rules were verified to contain the agent name SynGAPa within it.
+	\end{itemize}
+		\begin{figure}[H]
+		\centering
+		\captionsetup{justification=centering}
+		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{AgentNameOutput2.png}	
+		\caption{The retrieved rules from the stored procedure called with the argument `SynGAPa'}
+		\label{fig:AgentNameOutput2}		
+	\end{figure}
+\end{enumerate}
+
+\subsection{GetRulesFromDomainNamesPair}
+The purpose of this stored procedure is to return the PPI rules which contains the domain  names (provided as an input). To verify that the defined stored procedure behaves as expected, test cases were tried and the outputs were verified. Some of these test cases are as follows: 
+\begin{enumerate}
+	\item 
+	\begin{itemize}
+		\item 	The stored procedure is called with the domain name arguments `x,n1', using the command, \\
+		call GetRulesFromDomainNamesPair(`x',`n1')\\
+		from MySQL workbench. 
+		\item The expected output is the PPI rules, containing the domain names x and n1 within it.
+		\item The output obtained from the database contained 4 rows. A snippet of the output is shown below, in the figure \ref{fig:DomainNameOutput1}. Each of these PPI rules were verified to contain the domain names x and n1 within it.
+		\item The stored procedure call was also tested with the arguments swapped (n1 and x) and the retrieved rules were verified to be the same.		
+	\end{itemize}
+	\begin{figure}[H]
+		\centering
+		\captionsetup{justification=centering}
+		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{DomainNameOutput1.png}	
+		\caption{The retrieved rules from the stored procedure called with the argument `x' and 'n1'}
+		\label{fig:DomainNameOutput1}		
+	\end{figure}
+
+	\item 
+\begin{itemize}
+	\item 	The stored procedure is called with the domain name arguments `GK,GKBD', using the command, \\
+	call GetRulesFromDomainNamesPair(`GK',`GKBD')\\
+	from MySQL workbench. 
+	\item The expected output is the PPI rules, containing the domain names GK and GKBD within it.
+	\item The output obtained from the database contained 9 rows. A snippet of the output is shown below, in the figure \ref{fig:DomainNameOutput2}. Each of these PPI rules were verified to contain the domain names GK and GKBD within it.
+	\item The stored procedure call was also tested with the arguments swapped (GKBD and GK) and the retrieved rules were verified to be the same.		
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{DomainNameOutput2.png}	
+	\caption{The retrieved rules from the stored procedure called with the argument `GK' and 'GKBD'}
+	\label{fig:DomainNameOutput2}		
+\end{figure}
+\end{enumerate}
+
+\section {Verification of results displayed in UI}
+In this section we proceed to verify the outputs displayed in the UI created using django and DataTables. In order to judge the correctness of the results fetched from the database and displayed within the UI, it has to be ensured that the results from the stored procedure are displayed in the UI without any data loss or modifications. This retrieval and display test is performed for obtaining the PPI rules based on both the stored procedures (GetRulesFromAgentName and GetRulesFromDomainNamesPair).
+
+\subsection{Agent Name}
+In this test, the stored procedure GetRulesAgentName is called from within the django app and the output is displayed in the UI. The displayed output in the UI was matched with the output from the stored procedure in MySQL workbench.\\ Two examples of such test cases are as follows:
+\begin{enumerate}
+	\item The UI is called with the agent name CaM and a snippet of the retrieved rules is shown in the figure \ref{fig:CorrectnessAgentName1}. The number of entries retrieved in the UI was 14 and the number of entries retrieved by the stored procedure was also 14. The rules retrieved were also exactly the same.
+	\begin{figure}[H]
+		\centering
+		\captionsetup{justification=centering}
+		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{CorrectnessAgentName1.png}	
+		\caption{The retrieved rules from the stored procedure called with the agent name `CaM'}
+		\label{fig:CorrectnessAgentName1}		
+	\end{figure}
+	\item The UI is called with the agent name SynGAPa and a snippet of the retrieved rules is shown in the figure \ref{fig:CorrectnessAgentName2}. The number of entries retrieved in the UI was 6 and the number of entries retrieved by the stored procedure was also 6. The rules retrieved were also exactly the same.
+	\begin{figure}[H]
+		\centering
+		\captionsetup{justification=centering}
+		\includegraphics[width=\linewidth,height=6.5cm,keepaspectratio]{CorrectnessAgentName2.png}	
+		\caption{The retrieved rules from the stored procedure called with the agent name `SynGAPa'}
+		\label{fig:CorrectnessAgentName2}		
+	\end{figure}	
+\end{enumerate}
+
+
+\subsection{Pair of Domain Names}
+In this test, the stored procedure GetRulesFromDomainNamesPair is called from within the django app and the output is displayed in the UI. The displayed output in the UI was matched with the output from the stored procedure in MySQL workbench. For each of the domain name pair inputs, the entries in text boxes of the web form were interchanged the and results were verified to be the same.\\ Two examples of such test cases are as follows:
+
+\begin{enumerate}
+	\item The UI is called with the domain names x,n1 and a snippet of the retrieved rules is shown in the figure \ref{fig:CorrectnessDomainName1}. The number of entries retrieved in the UI was 4 and the number of entries retrieved by the stored procedure was also 4. The rules retrieved were also exactly the same.
+	\begin{figure}[H]
+		\centering
+		\captionsetup{justification=centering}
+		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{CorrectnessDomainName1.png}	
+		\caption{The retrieved rules from the stored procedure called with the domain names `x' and `n1'}
+		\label{fig:CorrectnessDomainName1}		
+	\end{figure}
+	\item The UI is called with the domain names GK,GKBD and a snippet of the retrieved rules is shown in the figure \ref{fig:CorrectnessDomainName2}. The number of entries retrieved in the UI was 9 and the number of entries retrieved by the stored procedure was also 9. The rules retrieved were also exactly the same.
+	\begin{figure}[H]
+		\centering
+		\captionsetup{justification=centering}
+		\includegraphics[width=\linewidth,height=6.5cm,keepaspectratio]{CorrectnessDomainName2.png}	
+		\caption{The retrieved rules from the stored procedure called with the domain names `GK' and `GKBD'}
+		\label{fig:CorrectnessDomainName2}		
+	\end{figure}	
+\end{enumerate}
 
 \chapter{Conclusions}
 
-\section{Final Reminder}
 
-The body of your dissertation, before the references and any appendices,
-\emph{must} finish by page~40. The introduction, after preliminary material,
-should have started on page~1.
+%\section{Final Reminder}
 
-You may not change the dissertation format (e.g., reduce the font
-size, change the margins, or reduce the line spacing from the default
-1.5 spacing). Over length or incorrectly-formatted dissertations will
-not be accepted and you would have to modify your dissertation and
-resubmit.  You cannot assume we will check your submission before the
-final deadline and if it requires resubmission after the deadline to
-conform to the page and style requirements you will be subject to the
-usual late penalties based on your final submission time.
+%The body of your dissertation, before the references and any appendices,
+%\emph{must} finish by page~40. The introduction, after preliminary material,
+%should have started on page~1.
+
+%You may not change the dissertation format (e.g., reduce the font
+%size, change the margins, or reduce the line spacing from the default
+%1.5 spacing). Over length or incorrectly-formatted dissertations will
+%not be accepted and you would have to modify your dissertation and
+%resubmit.  You cannot assume we will check your submission before the
+%final deadline and if it requires resubmission after the deadline to
+%conform to the page and style requirements you will be subject to the
+%usual late penalties based on your final submission time.
 
 
 \bibliographystyle{plain}
@@ -521,4 +664,5 @@ This section includes software versions that were used to create and deploy the 
  \section{MySQL Connector Version in Python scripts}
  \section{Django Version}
  \section{Data Tables Version}
+ 
 \end{document}

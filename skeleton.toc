@@ -37,13 +37,19 @@
 \contentsline {subsection}{\numberline {3.6.1}Database Scripts}{27}
 \contentsline {subsection}{\numberline {3.6.2}Web Application}{28}
 \contentsline {chapter}{\numberline {4}Verification and Results}{29}
-\contentsline {chapter}{\numberline {5}Conclusions}{30}
-\contentsline {section}{\numberline {5.1}Final Reminder}{30}
-\contentsline {chapter}{Bibliography}{31}
-\contentsline {chapter}{\numberline {A}Software Version}{35}
-\contentsline {section}{\numberline {A.1}Operating System}{35}
-\contentsline {section}{\numberline {A.2}MySQL Version/ Client Version}{35}
-\contentsline {section}{\numberline {A.3}Python Version}{35}
-\contentsline {section}{\numberline {A.4}MySQL Connector Version in Python scripts}{35}
-\contentsline {section}{\numberline {A.5}Django Version}{35}
-\contentsline {section}{\numberline {A.6}Data Tables Version}{35}
+\contentsline {section}{\numberline {4.1}Verification pipeline for database entries}{29}
+\contentsline {section}{\numberline {4.2}Verification of stored procedure results}{31}
+\contentsline {subsection}{\numberline {4.2.1}GetRulesFromAgentName}{31}
+\contentsline {subsection}{\numberline {4.2.2}GetRulesFromDomainNamesPair}{32}
+\contentsline {section}{\numberline {4.3}Verification of results displayed in UI}{33}
+\contentsline {subsection}{\numberline {4.3.1}Agent Name}{33}
+\contentsline {subsection}{\numberline {4.3.2}Pair of Domain Names}{35}
+\contentsline {chapter}{\numberline {5}Conclusions}{37}
+\contentsline {chapter}{Bibliography}{38}
+\contentsline {chapter}{\numberline {A}Software Version}{42}
+\contentsline {section}{\numberline {A.1}Operating System}{42}
+\contentsline {section}{\numberline {A.2}MySQL Version/ Client Version}{42}
+\contentsline {section}{\numberline {A.3}Python Version}{42}
+\contentsline {section}{\numberline {A.4}MySQL Connector Version in Python scripts}{42}
+\contentsline {section}{\numberline {A.5}Django Version}{42}
+\contentsline {section}{\numberline {A.6}Data Tables Version}{42}

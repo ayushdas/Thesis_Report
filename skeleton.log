@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.10)  8 AUG 2019 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.10)  10 AUG 2019 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -491,9 +491,81 @@ CRE-
 Chapter 4.
 [29
 
-]
+] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 521--522
+
+ []
+
+<AgentNameOutput1.png, id=142, 996.72375pt x 246.9225pt>
+File: AgentNameOutput1.png Graphic file (type png)
+
+<use AgentNameOutput1.png>
+Package pdftex.def Info: AgentNameOutput1.png used on input line 526.
+(pdftex.def)             Requested size: 412.55283pt x 102.2034pt.
+ [31 <./AgentNameOutput1.png>]
+<AgentNameOutput2.png, id=147, 996.72375pt x 122.4575pt>
+File: AgentNameOutput2.png Graphic file (type png)
+
+<use AgentNameOutput2.png>
+Package pdftex.def Info: AgentNameOutput2.png used on input line 542.
+(pdftex.def)             Requested size: 412.55283pt x 50.68623pt.
+
+<DomainNameOutput1.png, id=148, 997.7275pt x 88.33pt>
+File: DomainNameOutput1.png Graphic file (type png)
+
+<use DomainNameOutput1.png>
+Package pdftex.def Info: DomainNameOutput1.png used on input line 563.
+(pdftex.def)             Requested size: 412.55724pt x 36.52417pt.
+
+Overfull \hbox (11.16426pt too wide) in paragraph at lines 570--573
+[]\OT1/ptm/m/n/12 The stored pro-ce-dure is called with the do-main name ar-gu-
+ments `GK,GKBD',
+ []
+
+[32 <./AgentNameOutput2.png> <./DomainNameOutput1.png>]
+<DomainNameOutput2.png, id=155, 992.70876pt x 170.6375pt>
+File: DomainNameOutput2.png Graphic file (type png)
+
+<use DomainNameOutput2.png>
+Package pdftex.def Info: DomainNameOutput2.png used on input line 580.
+(pdftex.def)             Requested size: 412.57236pt x 70.91737pt.
+
+<CorrectnessAgentName1.png, id=156, 1135.24126pt x 523.9575pt>
+File: CorrectnessAgentName1.png Graphic file (type png)
+
+<use CorrectnessAgentName1.png>
+Package pdftex.def Info: CorrectnessAgentName1.png used on input line 596.
+(pdftex.def)             Requested size: 412.56674pt x 190.41542pt.
+ [33 <./DomainNameOutput2.png>]
+<CorrectnessAgentName2.png, id=161, 1121.18875pt x 575.14874pt>
+File: CorrectnessAgentName2.png Graphic file (type png)
+
+<use CorrectnessAgentName2.png>
+Package pdftex.def Info: CorrectnessAgentName2.png used on input line 604.
+(pdftex.def)             Requested size: 360.51563pt x 184.93773pt.
+
+Overfull \hbox (1.81435pt too wide) in paragraph at lines 612--613
+\OT1/ptm/m/n/12 In this test, the stored pro-ce-dure GetRules-From-Do-main-Name
+-s-Pair is called from within
+ []
+
+[34 <./CorrectnessAgentName1.png> <./CorrectnessAgentName2.png>]
+<CorrectnessDomainName1.png, id=167, 1122.1925pt x 590.205pt>
+File: CorrectnessDomainName1.png Graphic file (type png)
+
+<use CorrectnessDomainName1.png>
+Package pdftex.def Info: CorrectnessDomainName1.png used on input line 619.
+(pdftex.def)             Requested size: 412.55063pt x 216.97653pt.
+
+<CorrectnessDomainName2.png, id=168, 1250.6725pt x 664.4825pt>
+File: CorrectnessDomainName2.png Graphic file (type png)
+
+<use CorrectnessDomainName2.png>
+Package pdftex.def Info: CorrectnessDomainName2.png used on input line 627.
+(pdftex.def)             Requested size: 348.08672pt x 184.9385pt.
+ [35 <./CorrectnessDomainName1.png>] [36 <./CorrectnessDomainName2.png>]
 Chapter 5.
-(./skeleton.bbl [30
+(./skeleton.bbl [37
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
@@ -513,7 +585,7 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-[31
+[38
 
 ]
 Missing character: There is no â in font ptmr7t!
@@ -522,19 +594,19 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
- [32] [33]) [34]
+ [39] [40]) [41]
 Appendix A.
-[35
+[42
 
 ] (./skeleton.aux) ) 
 Here is how much of TeX's memory you used:
- 4362 strings out of 493014
- 66595 string characters out of 6133351
- 133144 words of memory out of 5000000
- 7807 multiletter control sequences out of 15000+600000
+ 4410 strings out of 493014
+ 67867 string characters out of 6133351
+ 133232 words of memory out of 5000000
+ 7847 multiletter control sequences out of 15000+600000
  41442 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,6n,40p,1606b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,6n,40p,1606b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r
 .enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
 pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
@@ -547,10 +619,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/yfonts-t1/
 yswab.pfb>
-Output written on skeleton.pdf (40 pages, 1776891 bytes).
+Output written on skeleton.pdf (47 pages, 2741124 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
+ 237 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
