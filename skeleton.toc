@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {3.2}Steps for adding new entries to the database}{16}
 \contentsline {subsection}{\numberline {3.2.1}Agent}{16}
 \contentsline {subsection}{\numberline {3.2.2}Domain}{17}
-\contentsline {subsection}{\numberline {3.2.3}Domain-Agent Relationship}{17}
+\contentsline {subsection}{\numberline {3.2.3}Domain-Agent}{17}
 \contentsline {subsection}{\numberline {3.2.4}Rule}{17}
 \contentsline {subsection}{\numberline {3.2.5}Rule-Domain-Agent}{17}
 \contentsline {section}{\numberline {3.3}Description of Stored Procedures}{18}
@@ -43,13 +43,15 @@
 \contentsline {subsection}{\numberline {4.2.2}GetRulesFromDomainNamesPair}{32}
 \contentsline {section}{\numberline {4.3}Verification of results displayed in UI}{33}
 \contentsline {subsection}{\numberline {4.3.1}Agent Name}{33}
-\contentsline {subsection}{\numberline {4.3.2}Pair of Domain Names}{35}
-\contentsline {chapter}{\numberline {5}Conclusions}{37}
-\contentsline {chapter}{Bibliography}{38}
-\contentsline {chapter}{\numberline {A}Software Version}{42}
-\contentsline {section}{\numberline {A.1}Operating System}{42}
-\contentsline {section}{\numberline {A.2}MySQL Version/ Client Version}{42}
-\contentsline {section}{\numberline {A.3}Python Version}{42}
-\contentsline {section}{\numberline {A.4}MySQL Connector Version in Python scripts}{42}
-\contentsline {section}{\numberline {A.5}Django Version}{42}
-\contentsline {section}{\numberline {A.6}Data Tables Version}{42}
+\contentsline {subsection}{\numberline {4.3.2}Domain Names Pair}{35}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{37}
+\contentsline {section}{\numberline {5.1}Conclusion}{37}
+\contentsline {section}{\numberline {5.2}Future Work}{37}
+\contentsline {chapter}{Bibliography}{39}
+\contentsline {chapter}{\numberline {A}Software Version}{43}
+\contentsline {section}{\numberline {A.1}Operating System}{43}
+\contentsline {section}{\numberline {A.2}MySQL Version/ Client Version}{43}
+\contentsline {section}{\numberline {A.3}Python Version}{43}
+\contentsline {section}{\numberline {A.4}MySQL Connector Version in Python scripts}{44}
+\contentsline {section}{\numberline {A.5}Django Version}{44}
+\contentsline {section}{\numberline {A.6}Data Tables Version}{44}

@@ -50,6 +50,7 @@ I would like to thank my supervisor Oksana Sorokina for her continued guidance a
 Finally, I would like to thank my family for their support and guidance.
 
 \tableofcontents
+\listoffigures
 \end{preliminary}
 
 
@@ -304,7 +305,7 @@ The database structure is optimized for fast read operations. This is because, b
 	Query the agent table and check if an agent exists with the given name. It should be noted that the agent name is case sensitive. In case it exists then there is no need to add a new entry to the database. However, if it does not exist then a new entry can be made in agent table filling in the relevant fields. 
 \subsection{Domain}
 	Query the domain table and check if a domain exists with the given name. It should be noted that the domain name is case sensitive. In case it exists then there is no need to add a new entry to the database. However, if it does not exist then a new entry can be made in domain table filling in the relevant fields. 
-\subsection{Domain-Agent Relationship}
+\subsection{Domain-Agent}
 	When the Agent/Domain is added to the database to connect them we have to make entries within the domain\_agent table. Based on the entries made in the Agent and Domain table we can obtain the corresponding ids and make entries containing the (domain id, agent id) pairs. If a new agent is added then all its corresponding domains need to be entered as separate rows where the agent id will remain the same. If a new domain is added then all its corresponding agents need to be added as separate rows where the domain id will remain the same. 	
 	It should be kept in mind that if a new agent is added to the agent table and it has a new corresponding domain added to the domain table, then that pair must be entered only once within the domain\_agent table.	
 \subsection{Rule}
@@ -561,7 +562,7 @@ The purpose of this stored procedure is to return the PPI rules which contains t
 		\centering
 		\captionsetup{justification=centering}
 		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{DomainNameOutput1.png}	
-		\caption{The retrieved rules from the stored procedure called with the argument `x' and 'n1'}
+		\caption{The retrieved rules from the stored procedure called with the arguments `x' and 'n1'}
 		\label{fig:DomainNameOutput1}		
 	\end{figure}
 
@@ -578,7 +579,7 @@ The purpose of this stored procedure is to return the PPI rules which contains t
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{DomainNameOutput2.png}	
-	\caption{The retrieved rules from the stored procedure called with the argument `GK' and 'GKBD'}
+	\caption{The retrieved rules from the stored procedure called with the arguments `GK' and 'GKBD'}
 	\label{fig:DomainNameOutput2}		
 \end{figure}
 \end{enumerate}
@@ -608,7 +609,7 @@ In this test, the stored procedure GetRulesAgentName is called from within the d
 \end{enumerate}
 
 
-\subsection{Pair of Domain Names}
+\subsection{Domain Names Pair}
 In this test, the stored procedure GetRulesFromDomainNamesPair is called from within the django app and the output is displayed in the UI. The displayed output in the UI was matched with the output from the stored procedure in MySQL workbench. For each of the domain name pair inputs, the entries in text boxes of the web form were interchanged the and results were verified to be the same.\\ Two examples of such test cases are as follows:
 
 \begin{enumerate}
@@ -630,7 +631,17 @@ In this test, the stored procedure GetRulesFromDomainNamesPair is called from wi
 	\end{figure}	
 \end{enumerate}
 
-\chapter{Conclusions}
+\chapter{Conclusion and Future Work}
+This chapter summarizes the aims and objectives achieved through this project. It also lays down certain suggestions for future work in this field.
+
+\section{Conclusion}
+This project achieves the successful creation of a centralized database for storing the protein-protein interactions in a rule-based (Kappa) format. The design of the database is such that, it is flexible to accommodate future changes and additions of PPI rules. The stored procedures created in this project, help in extracting PPI rules based on either agent name or a pair of domain names, which help in filtering the PPI rules. The web application and user interface, allow users to access the PPI rules in a user-friendly format. The UI options in the user interface allow users to preserve the results displayed in the tables, onto their local system. This can be achieved as the results displayed in the UI can be exported to different file formats like CSV and Excel.
+\section{Future Work}
+A possible area of future extension to the database may be, to include a rule class for the rules stored in the PPI database. This class would help emphasize the priority of a protein-protein interaction rule. A higher priority rule would be the one having greater certainty and more information.
+
+Another area of development could be to create and include more stored procedures in the database. These stored procedures could help in further filtering the PPI rules. For example, the existing stored procedure for extracting PPI rules based on domain name pairs, could be extended to include an open and closed universe. In an open universe, the protein interaction rules could contain the pair of domain names besides containing other domain names. However, in a closed universe the protein interaction rules retrieved by the stored procedure would only contain those two domains. Depending upon the project requirement, this can be created by either including a universe indicator in the existing stored procedure or creating separate stored procedures, one for each universe.
+
+Also in the area of scripting, scripts can be written to process the rules obtained from the UI in the form of Excel or CSV files. The processing can be such that it renders the rules ready for being fed to the simulator for visualization of the protein interactions.
 
 
 %\section{Final Reminder}
@@ -659,10 +670,27 @@ In this test, the stored procedure GetRulesFromDomainNamesPair is called from wi
 % 
 This section includes software versions that were used to create and deploy the application onto a local machine. While deploying to a database/web server it may be helpful to have these details.
  \section{Operating System}
+ macOS Mojave Version 10.14.2\\
+ Obtained by checking details of the Operating System.
  \section{MySQL Version/ Client Version}
+ MySQL version: 8.0.16\\
+ MySQLWorkbench version (8.0): Version 8.0.16 build 14498383 CE(64 bits) Community\\
+ Both of these details are obtained from within MySQLWorkbench.
  \section{Python Version}
+ Python 3.7.0\\
+ Obtained by the command: python --version
  \section{MySQL Connector Version in Python scripts}
+ 8.0.16\\
+ This is obtained as a property of the mysql.connector module.
+ To check the version:
+ Create a python script with the following details:\\
+ import mysql.connector\\
+ print(mysql.connector.\_\_version\_\_)\\
  \section{Django Version}
+ 2.2.3\\
+ To check the django version navigate to the project folder and use the manage script.\\
+  Obtained by the command: python manage.py version
  \section{Data Tables Version}
+ 1.10
  
 \end{document}

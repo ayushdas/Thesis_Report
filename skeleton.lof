@@ -1,0 +1,23 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Application of rule `r' to a reaction mixture \textswab {M} , comprising of two agents. $L_r$ and $R_r$ represent the state of the site graph before and after the application of rule `r' respectively. Source: \cite {kappaPlatform}\relax }}{6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Depiction of obtaining a Protein-Protein interaction (PPI) rule from research literature. Source: \cite {kappaPlatform}\relax }}{8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Explanation of causal analysis. Source: \cite {kappaPlatform}\relax }}{9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Database ER Diagram created using software Visual Paradigm \cite {vd}\relax }}{13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Form to accept the agent name.\relax }}{24}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The rules retrieved based on the domain names provided in the agent name form.\relax }}{24}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Form to accept the domain names.\relax }}{25}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The rules retrieved based on the domain names provided in the domain names form.\relax }}{26}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces A closer view at the user interface (UI) buttons.\relax }}{26}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The retrieved rules from the stored procedure called with the argument `Cam'\relax }}{31}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The retrieved rules from the stored procedure called with the argument `SynGAPa'\relax }}{32}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The retrieved rules from the stored procedure called with the arguments `x' and 'n1'\relax }}{32}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The retrieved rules from the stored procedure called with the arguments `GK' and 'GKBD'\relax }}{33}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The retrieved rules from the stored procedure called with the agent name `CaM'\relax }}{34}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces The retrieved rules from the stored procedure called with the agent name `SynGAPa'\relax }}{34}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces The retrieved rules from the stored procedure called with the domain names `x' and `n1'\relax }}{35}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces The retrieved rules from the stored procedure called with the domain names `GK' and `GKBD'\relax }}{36}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
