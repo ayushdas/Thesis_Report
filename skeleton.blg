@@ -7,9 +7,9 @@ Repeated entry---line 200 of file mybibfile.bib
  : @incollection{bioNetGen
  :                        ,
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in vd
 Warning--to sort, need author or key in kappaURL
 Warning--to sort, need author or key in django
-Warning--to sort, need author or key in vd
 Warning--to sort, need author or key in Uniprot-Prosite
 Warning--to sort, need author or key in indexing
 Warning--to sort, need author or key in sourceCode

@@ -1,13 +1,13 @@
 \begin{thebibliography}{10}
 
+\bibitem{vd}
+\url{https://www.visual-paradigm.com/}.
+
 \bibitem{kappaURL}
 \url{https://kappalanguage.org/documentation}.
 
 \bibitem{django}
 \url{https://docs.djangoproject.com/en/2.2/}.
-
-\bibitem{vd}
-\url{https://www.visual-paradigm.com/}.
 
 \bibitem{Uniprot-Prosite}
 \url{https://www.uniprot.org/database/DB-0084}.
