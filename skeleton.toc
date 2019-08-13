@@ -44,9 +44,10 @@
 \contentsline {section}{\numberline {4.3}Verification of results displayed in UI}{33}
 \contentsline {subsection}{\numberline {4.3.1}Agent Name}{33}
 \contentsline {subsection}{\numberline {4.3.2}Domain Names Pair}{35}
+\contentsline {section}{\numberline {4.4}KaSim output example}{36}
 \contentsline {chapter}{\numberline {5}Conclusion and Future Work}{37}
 \contentsline {section}{\numberline {5.1}Conclusion}{37}
-\contentsline {section}{\numberline {5.2}Future Work}{37}
+\contentsline {section}{\numberline {5.2}Future Work}{38}
 \contentsline {chapter}{Bibliography}{39}
 \contentsline {chapter}{\numberline {A}Software Version}{43}
 \contentsline {section}{\numberline {A.1}Operating System}{43}

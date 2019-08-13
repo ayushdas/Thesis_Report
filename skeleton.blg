@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: skeleton.aux
 The style file: plain.bst
 Database file #1: mybibfile.bib
-Repeated entry---line 200 of file mybibfile.bib
+Repeated entry---line 186 of file mybibfile.bib
  : @incollection{bioNetGen
  :                        ,
 I'm skipping whatever remains of this entry
@@ -14,47 +14,48 @@ Warning--to sort, need author or key in Uniprot-Prosite
 Warning--to sort, need author or key in indexing
 Warning--to sort, need author or key in sourceCode
 Warning--to sort, need author or key in dataTables
+Warning--to sort, need author or key in KaSimBrowser
 Warning--can't use both volume and number fields in pathwayAnalysis
 Warning--can't use both volume and number fields in ruleMultiscale
-You've used 34 entries,
+You've used 35 entries,
             2118 wiz_defined-function locations,
-            674 strings with 10319 characters,
-and the built_in function-call counts, 12960 in all, are:
-= -- 1223
-> -- 779
+            677 strings with 10467 characters,
+and the built_in function-call counts, 13109 in all, are:
+= -- 1236
+> -- 780
 < -- 11
-+ -- 316
++ -- 317
 - -- 278
-* -- 1017
-:= -- 2109
-add.period$ -- 97
-call.type$ -- 34
-change.case$ -- 229
+* -- 1022
+:= -- 2123
+add.period$ -- 98
+call.type$ -- 35
+change.case$ -- 231
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 426
-empty$ -- 938
+cite$ -- 45
+duplicate$ -- 433
+empty$ -- 961
 format.name$ -- 278
-if$ -- 2690
+if$ -- 2728
 int.to.chr$ -- 0
-int.to.str$ -- 34
+int.to.str$ -- 35
 missing$ -- 27
-newline$ -- 159
+newline$ -- 162
 num.names$ -- 54
-pop$ -- 267
+pop$ -- 276
 preamble$ -- 1
-purify$ -- 202
+purify$ -- 204
 quote$ -- 0
-skip$ -- 322
+skip$ -- 331
 stack$ -- 0
-substring$ -- 696
-swap$ -- 95
+substring$ -- 701
+swap$ -- 96
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 136
-warning$ -- 9
+type$ -- 140
+warning$ -- 10
 while$ -- 98
-width$ -- 36
-write$ -- 345
+width$ -- 37
+write$ -- 350
 (There was 1 error message)

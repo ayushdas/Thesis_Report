@@ -631,11 +631,29 @@ In this test, the stored procedure GetRulesFromDomainNamesPair is called from wi
 	\end{figure}	
 \end{enumerate}
 
+\section{KaSim output example}
+The Kappa rules may be fed to a Kappa simulator to generate a visualization of the protein interaction rules. For the purpose of demonstration, this section presents an example of feeding the Kappa rules to KaSim, the web simulator \cite{KaSimBrowser}. The rules fed to the simulator are depicted in the left hand side and the output obtained is on the right hand side of the figure \ref{fig:kappaOutput}. 
+	\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=\linewidth,height=8.5cm,keepaspectratio]{KasimOutput}	
+	\caption{An example of PPI rules visualization by KaSim \cite{KaSimBrowser}}
+	\label{fig:kappaOutput}		
+\end{figure}	
+
 \chapter{Conclusion and Future Work}
 This chapter summarizes the aims and objectives achieved through this project. It also lays down certain suggestions for future work in this field.
 
 \section{Conclusion}
-This project achieves the successful creation of a centralized database for storing the protein-protein interactions in a rule-based (Kappa) format. The design of the database is such that, it is flexible to accommodate future changes and additions of PPI rules. The stored procedures created in this project, help in extracting PPI rules based on either agent name or a pair of domain names, which help in filtering the PPI rules. The web application and user interface, allow users to access the PPI rules in a user-friendly format. The UI options in the user interface allow users to preserve the results displayed in the tables, onto their local system. This can be achieved as the results displayed in the UI can be exported to different file formats like CSV and Excel.
+The purpose of this project was to create a central repository for protein-protein interaction rules, stored in the rule based (Kappa) format. These rules were collected by researchers from previous research and provided as raw data, to be processed and saved to the database. The database was built as per requirements discussed with the project supervisor and tested to ensure correctness. 
+
+This project achieves the aforementioned purpose by the successful creation of the centralized database for storing the protein-protein interaction rules. The design of the database is such that, it is flexible to accommodate future changes and additions of PPI rules. Rule additions can be made to database as per steps laid out in Section 3.2.
+
+The stored procedures created within the database, as part of this project, help in extracting the PPI rules based on either agent name or a pair of domain names. The stored procedures are helpful as they provide ready access to a set of SQL queries that enable filtering of the PPI rules. 
+
+On discussions with the project supervisor and keeping in mind the future direction of the project, it was decided to create a web application with a user interface (UI) to access the PPI rules. Although, the creation of the web application and UI were not part of the original project proposal, it was decided to extend the work to improve accessibility and accommodate future direction of the project. Hence, the original proposal was further extended significantly.
+
+In the web interface, the PPI rules are obtained based on agent name or domain names pair, by making calls to the stored procedure routines within the database. The web application and user interface, allow users to access the PPI rules in a user-friendly format. The UI options in the user interface allow users to preserve the results displayed in the tables, onto their local system. This can be achieved as the results displayed in the UI can be exported to different file formats like CSV and Excel.  
 \section{Future Work}
 A possible area of future extension to the database may be, to include a rule class for the rules stored in the PPI database. This class would help emphasize the priority of a protein-protein interaction rule. A higher priority rule would be the one having greater certainty and more information.
 

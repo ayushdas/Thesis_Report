@@ -21,6 +21,9 @@
 \bibitem{dataTables}
 \url{https://datatables.net/}.
 
+\bibitem{KaSimBrowser}
+\url{https://tools.kappalanguage.org/try/?model=https://raw.githubusercontent.com/Kappa-Dev/KaSim/master/models/abc-pert.ka}.
+
 \bibitem{kappaPlatform}
 Pierre Boutillier, Mutaamba Maasha, Xing Li, Héctor~F Medina-Abarca, Jean
   Krivine, Jérôme Feret, Ioana Cristescu, Angus~G Forbes, and Walter Fontana.
