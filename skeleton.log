@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.10)  13 AUG 2019 21:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.10)  14 AUG 2019 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -420,6 +420,12 @@ e
 
 [10] [11]
 Chapter 3.
+
+Overfull \hbox (11.61864pt too wide) in paragraph at lines 229--230
+\OT1/ptm/m/n/12 three main ta-bles, 2 re-la-tion-ship ta-bles con-sist-ing of d
+o-main[]agent and rule[]domain[]agent
+ []
+
 [12
 
 ] <er.png, id=80, 872.25874pt x 676.5275pt>
@@ -428,8 +434,8 @@ File: er.png Graphic file (type png)
 Package pdftex.def Info: er.png used on input line 236.
 (pdftex.def)             Requested size: 412.55704pt x 319.98094pt.
  [13 <./er.png>]
-Overfull \hbox (12.39874pt too wide) in paragraph at lines 257--258
-[]\OT1/ptm/m/n/12 agent[]name: A `meta data col-umn' that con-tains the names o
+Overfull \hbox (10.11871pt too wide) in paragraph at lines 257--258
+[]\OT1/ptm/m/n/12 agent[]name: A `meta-data col-umn' that con-tains the names o
 f agent molecules
  []
 
@@ -523,64 +529,63 @@ File: DomainNameOutput1.png Graphic file (type png)
 <use DomainNameOutput1.png>
 Package pdftex.def Info: DomainNameOutput1.png used on input line 564.
 (pdftex.def)             Requested size: 412.55724pt x 36.52417pt.
-
+ [32 <./AgentNameOutput2.png>]
 Overfull \hbox (11.16426pt too wide) in paragraph at lines 571--574
 []\OT1/ptm/m/n/12 The stored pro-ce-dure is called with the do-main name ar-gu-
 ments `GK,GKBD',
  []
 
-[32 <./AgentNameOutput2.png> <./DomainNameOutput1.png>]
-<DomainNameOutput2.png, id=161, 992.70876pt x 170.6375pt>
+<DomainNameOutput2.png, id=160, 992.70876pt x 170.6375pt>
 File: DomainNameOutput2.png Graphic file (type png)
 
 <use DomainNameOutput2.png>
 Package pdftex.def Info: DomainNameOutput2.png used on input line 581.
 (pdftex.def)             Requested size: 412.57236pt x 70.91737pt.
-
-<CorrectnessAgentName1.png, id=162, 1135.24126pt x 523.9575pt>
+ [33 <./DomainNameOutput1.png> <./DomainNameOutput2.png>] <CorrectnessAgentName
+1.png, id=166, 1135.24126pt x 523.9575pt>
 File: CorrectnessAgentName1.png Graphic file (type png)
 
 <use CorrectnessAgentName1.png>
 Package pdftex.def Info: CorrectnessAgentName1.png used on input line 597.
 (pdftex.def)             Requested size: 412.56674pt x 190.41542pt.
- [33 <./DomainNameOutput2.png>]
+
 <CorrectnessAgentName2.png, id=167, 1121.18875pt x 575.14874pt>
 File: CorrectnessAgentName2.png Graphic file (type png)
 
 <use CorrectnessAgentName2.png>
 Package pdftex.def Info: CorrectnessAgentName2.png used on input line 605.
 (pdftex.def)             Requested size: 360.51563pt x 184.93773pt.
-
+ [34 <./CorrectnessAgentName1.png>]
 Overfull \hbox (1.81435pt too wide) in paragraph at lines 613--614
 \OT1/ptm/m/n/12 In this test, the stored pro-ce-dure GetRules-From-Do-main-Name
 -s-Pair is called from within
  []
 
-[34 <./CorrectnessAgentName1.png> <./CorrectnessAgentName2.png>]
-<CorrectnessDomainName1.png, id=173, 1122.1925pt x 590.205pt>
+<CorrectnessDomainName1.png, id=172, 1122.1925pt x 590.205pt>
 File: CorrectnessDomainName1.png Graphic file (type png)
 
 <use CorrectnessDomainName1.png>
-Package pdftex.def Info: CorrectnessDomainName1.png used on input line 620.
+Package pdftex.def Info: CorrectnessDomainName1.png used on input line 621.
 (pdftex.def)             Requested size: 412.55063pt x 216.97653pt.
-
-<CorrectnessDomainName2.png, id=174, 1250.6725pt x 664.4825pt>
+ [35 <./CorrectnessAgentName2.png>]
+<CorrectnessDomainName2.png, id=177, 1250.6725pt x 664.4825pt>
 File: CorrectnessDomainName2.png Graphic file (type png)
 
 <use CorrectnessDomainName2.png>
-Package pdftex.def Info: CorrectnessDomainName2.png used on input line 628.
+Package pdftex.def Info: CorrectnessDomainName2.png used on input line 629.
 (pdftex.def)             Requested size: 348.08672pt x 184.9385pt.
- [35 <./CorrectnessDomainName1.png>]
-<KasimOutput.png, id=179, 1284.8pt x 803.0pt>
+ <KasimOutput.png, id=178, 1284.8pt x 803.0pt>
 File: KasimOutput.png Graphic file (type png)
- <use KasimOutput.png>
-Package pdftex.def Info: KasimOutput.png used on input line 639.
-(pdftex.def)             Requested size: 386.95251pt x 241.84532pt.
- [36 <./CorrectnessDomainName2.png> <./KasimOutput.png>]
-Chapter 5.
-[37
 
-] (./skeleton.bbl [38]
+<use KasimOutput.png>
+Package pdftex.def Info: KasimOutput.png used on input line 640.
+(pdftex.def)             Requested size: 386.95251pt x 241.84532pt.
+ [36 <./CorrectnessDomainName1.png> <./CorrectnessDomainName2.png>] [37 <./Kasi
+mOutput.png>]
+Chapter 5.
+[38
+
+] (./skeleton.bbl [39]
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 []$\OT1/pcr/m/n/12 https : / / dev . mysql . com / doc / refman / 8 . 0 / en / 
 optimization-[]indexes .
@@ -607,7 +612,7 @@ Missing character: There is no ´ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-[39
+[40
 
 ]
 Missing character: There is no â in font ptmr7t!
@@ -619,16 +624,16 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
- [40] [41]) [42]
+ [41] [42]) [43]
 Appendix A.
 
-Underfull \hbox (badness 10000) in paragraph at lines 701--707
+Underfull \hbox (badness 10000) in paragraph at lines 702--708
 
  []
 
-[43
+[44
 
-] [44] (./skeleton.aux) ) 
+] [45] (./skeleton.aux) ) 
 Here is how much of TeX's memory you used:
  4420 strings out of 493014
  68022 string characters out of 6133351
@@ -649,10 +654,10 @@ dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
 /times/utmri8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/yfont
 s-t1/yswab.pfb>
-Output written on skeleton.pdf (51 pages, 2998697 bytes).
+Output written on skeleton.pdf (52 pages, 2999377 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 255 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
