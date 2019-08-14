@@ -164,7 +164,7 @@ Furthermore, \textswab{M} denotes the state of a system which is also called the
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=\linewidth,height=10cm,keepaspectratio]{mixture.png}	
-	\caption{Application of rule `r' to a reaction mixture \textswab{M} , comprising of two agents. $L_r$ and $R_r$ represent the state of the site graph before and after the application of rule `r'  respectively. Source: \cite{kappaPlatform}}
+	\caption{Application of rule `r' to a reaction mixture \textswab{M}. $L$ and $R$ represent the state of the site graph before and after the application of rule `r'  respectively. Source: \cite{kappaPlatform}}
 	\label{fig:mixture}
 \end{figure}
 
@@ -181,7 +181,7 @@ Figure \ref{fig:kappa}, depicts the process of obtaining a Protein interaction r
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=\linewidth,height=10cm,keepaspectratio]{kappa.png}	
-	\caption{Depiction of obtaining a Protein-Protein interaction (PPI) rule from research literature. Source: \cite{kappaPlatform}}
+	\caption{Depiction of obtaining a Protein-Protein Interaction (PPI) rule from the research literature. Source: \cite{kappaPlatform}}
 	\label{fig:kappa}
 \end{figure}
 
@@ -200,7 +200,7 @@ In figure \ref{fig:eoi} (a), the vertical lines from each site, of every agent w
 
 As per \cite{kappaPlatform}, causality comprises of a relation between events. The algorithm begins by reconstructing the causal past of `*', the identity rule. Figure \ref{fig:eoi} (b) depicts an event `e' that is followed by the event ` e$'$ '. and iteratively queries if the modification or test of the site in e$'$  could have occurred before `e'. There are certain rules for the query which are detailed in \cite{kappaPlatform}, under causal linages and compression. This procedure results in a directed acyclic graph (DAG) as shown in \ref{fig:eoi} (c) which represents the precedence structure of the causal past. The procedure depicted in \ref{fig:eoi} (b) also eliminates from within the trace, any events irrelevant to the EOI. This is shown in figure \ref{fig:eoi} (d). The problem with obtaining the precedence structure is that it may violate a property called `necessity'. A method to tackle this problem involves an algorithm called minimization causal compression elaborated in \cite{danos2012graphs}. KasTOR translates the causal past into a boolean expression where each event is associated with a Boolean variable. The processing within KasTOR results to a compressed form of the causal past as shown in figure \ref{fig:eoi} (e).
 
-\section{Application of Protein-Protein Rule Interaction Database}
+\section{Applications of Protein-Protein Rule Interaction Database}
 The database for PPIs stored in a rule-based format will have several applications. Some of these are covered in this section.
 \begin{itemize}
 	\item
@@ -229,7 +229,7 @@ PPI rules were collected and provided by researchers in the form of an Excel She
 To construct the PPI database it was decided to structure the data into separate tables consisting of the agent, domain and the PPI rules. To connect the data in these three main tables, 2 relationship tables consisting of domain\_agent and rule\_domain\_agent were created.
 
  It should be noted that the main tables contain certain `metadata columns'. These metadata columns help in keeping track of the associated data for an entity within the table. For example, the domain table has an agent\_name column, which keeps a record of all the agent\_names that it associates to. However, the correct procedure to obtain the agent\_names that associate with a particular domain is to use the domain\_agent relationship table. The Entity Relationship (ER) diagram of the database and the description of the database tables are presented in the following sections.
-  \subsection{Entity Relationship Diagram:}
+  \subsection{Entity Relationship Diagram}
   \begin{figure}[H]
   	\centering
   	\captionsetup{justification=centering}
@@ -323,7 +323,7 @@ The database structure is optimized for fast read operations. This is because, b
  	\item A list of the rules, in the form of rule ids occurring along with the agent id (obtained in step 1) is extracted from the rule\_domain\_agent table. This is a list of distinct rule ids, which implies that none of the rule ids are repeated in the output.
  	\item Using the list of distinct rule ids, the rules are extracted from the rule table and provided as the output of the stored procedure.
  \end{enumerate}
- \subsection{GetRulesFromDomainNamePair}
+ \subsection{GetRulesFromDomainNamesPair}
   \textbf{Input:} Two domain names (data type of each being: text).\\
  \textbf{Output:} PPI rules in which both the domain names, provided as an input occurs.\\ 
  \textbf{Algorithm}
@@ -389,11 +389,11 @@ The main folder is called PPI\_DB, which contains within it the following sub-fo
 \section{Web Application for accessing the stored procedures}
 This section provides a walk-through of the Django app file structure and the important files for the project. It also explains the procedure to run the Django app and retrieve the PPI rules. We also explain the functionality of the user interface (UI) in this section.
 \subsection {Folder Structure and files}
-Files for the web application are contained in the django-app folder within the source code hosted on Github repository, \cite{sourceCode}. The root folder for django app is called djangonautic and within it we find the  subfolders called djanjonautic, ppi and templates. This folder also contains the manage.py file which is automatically generated while creating the django app and is used to run tasks like making database migrations and starting the web server. 
+Files for the web application are contained in the Django-app folder within the source code hosted on Github repository, \cite{sourceCode}. The root folder for Django app is called djangonautic and within it, we find the  subfolders called djanjonautic, ppi and templates. This folder also contains the manage.py file which is automatically generated while creating the Django app and is used to run tasks like making database migrations and starting the webserver. 
 
-Within the djangonautic folder contains an important file called settings.py. This contains important information such as the installed apps and database connection details. In case the django-app needs to be extended then the installed app need to be registered in the INSTALLED \_APPS section. The database details can also be modified from the settings.py file in the DATABASES section.
+Within the djangonautic folder contains an important file called settings.py. This contains important information such as the installed apps and database connection details. In case the django-app needs to be extended then the installed app need to be registered in the INSTALLED\_APPS section. The database details can also be modified from the settings.py file in the DATABASES section.
 
-The ppi folder contains the files and templates relevant to extracting and displaying the PPI information in the webpage. When the url is invoked, in order to serve the client request the django server first matches the url with the url patterns available in the urls.py file located in this folder. Once the url pattern is matched, the corresponding function from the views.py file is invoked. Within the functions of the views.py file the database call to the relevant stored procedure is made. Once the result is returned by the database the relevant template from the ppi/templates folder is invoked and the result is rendered onto the screen. The static folder within the ppi/templates contains the javascript, css and fonts obtained from the library \cite{dataTables}, are used to create and display the PPI rules in the UI. 
+The ppi folder contains the files and templates relevant to extracting and displaying the PPI information in the webpage. When the URL is invoked, to serve the client request the Django server first matches the URL with the URL patterns available in the urls.py file located in this folder. Once the URL pattern is matched, the corresponding function from the views.py file is invoked. Within the functions of the views.py file, the database call to the relevant stored procedure is made. Once the result is returned by the database the relevant template from the ppi/templates folder is invoked and the result is rendered onto the screen. The static folder within the ppi/templates contains the javascript, css and fonts obtained from the library \cite{dataTables}, are used to create and display the PPI rules in the UI. 
 \subsection {Running the web application}
 In order to run the web application the following steps need to be performed:
  \begin{enumerate}
@@ -404,8 +404,8 @@ In order to run the web application the following steps need to be performed:
 \subsection {Get PPI rules based on agent name}
 \begin{enumerate}
 	\item In order to access the PPI rules based on Agent Name, enter the following URL in the web browser: http://127.0.0.1:8000/ppi/AgentNameForm/.
-	\item Enter the agent name in the text box provided and click on submit as shown in the figure \ref{fig:agentNameForm}. (Note: The agent name is case sensitive). Internally the django app makes a connection to the database and invokes the GetRulesFromAgentName stored procedure and passes the agent name as argument to it.
-	\item The retrieved PPI rules will be visible in the next page as shown in the figure \ref{fig:agentNameRules}. In case there are no matching PPI rules then a message is displayed on the screen to inform the user.
+	\item Enter the agent name in the text box provided and click on submit as shown in the figure \ref{fig:agentNameForm}. (Note: The agent name is case sensitive). Internally the Django application makes a connection to the database and invokes the GetRulesFromAgentName stored procedure and passes the agent name as an argument to it.
+	\item The retrieved PPI rules will be visible in the next page as shown in figure \ref{fig:agentNameRules}. In case there are no matching PPI rules then a message is displayed on the screen to inform the user.
 \end{enumerate}
   \begin{figure}[H]
 	\centering
@@ -419,15 +419,15 @@ In order to run the web application the following steps need to be performed:
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{AgentNameRules.png}	
-	\caption{The rules retrieved based on the domain names provided in the agent name form.}
+	\caption{The rules retrieved based on the agent name provided in the agent name form.}
 	\label{fig:agentNameRules}		
 \end{figure}
 
 \subsection {Get PPI rules based on domain names}
 \begin{enumerate}
-	\item In order to access the PPI rules based on a pair of domain names, enter the following URL in the web browser: http://127.0.0.1:8000/ppi/DomainNameForm/
-	\item Enter the domain names in the text boxes provided and click on submit, as shown in the figure \ref{fig:domainNameForm}. (Note: The domain names are case sensitive). Internally the django app makes a connection to the database and invokes the GetRulesFromDomainNamePair stored procedure and passes the domain names as arguments to it.
-	\item The retrieved PPI rules will be visible in the next page as shown in the figure \ref{fig:domainNameRules}. In case there are no matching PPI rules then a message is displayed on the screen to inform the user.
+	\item To access the PPI rules based on a pair of domain names, enter the following URL in the web browser: http://127.0.0.1:8000/ppi/DomainNameForm/
+	\item Enter the domain names in the text boxes provided and click on submit, as shown in figure \ref{fig:domainNameForm}. (Note: The domain names are case sensitive). Internally the Django application makes a connection to the database and invokes the GetRulesFromDomainNamePair stored procedure and passes the domain names as arguments to it.
+	\item The retrieved PPI rules will be visible in the next page as shown in figure \ref{fig:domainNameRules}. In case there are no matching PPI rules then a message is displayed on the screen to inform the user.
 \end{enumerate}
 	 \begin{figure}[H]
 		\centering
@@ -445,7 +445,7 @@ In order to run the web application the following steps need to be performed:
 \end{figure}
 
 \subsection {User Interface (UI) functionality}
-The buttons in the user interface have been created with the help of the DataTables libraray \cite{dataTables}.These UI options are helpful, as the retrieved results can be processed and fed into the  kappa simulator for visualization of the protein interactions. A description of the buttons in the figure \ref{fig:UI} is as follows:
+The buttons in the user interface have been created with the help of the DataTables library \cite{dataTables}. These UI options are helpful, as the retrieved results can be processed and fed into the  kappa simulator for visualization of the protein interactions. A description of the buttons in figure \ref{fig:UI} is as follows:
 \begin{figure}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -457,7 +457,7 @@ The buttons in the user interface have been created with the help of the DataTab
 	\item Show `n' rows: Provides the option of displaying 10, 25, 50, 100 or all the rows.
 	\item Copy: Allows the table to be copied to the clipboard.
 	\item Excel: Allows the table to be exported to an excel sheet.
-	\item CSV: Allows the table to be exported to a comma separated file.
+	\item CSV: Allows the table to be exported to a file where the data entries are separated by a comma.
 	\item Print: Allows the user to print the retrieved results.
 	\item Column visibility: Allows the user to decide which columns are to be visible. This can be useful while exporting or saving only the required results.
 	\item Arrow buttons beside the field names: Allow the user to sort the results in numerical order in case of a numerical field or alphabetical order in case of a text field.
@@ -465,14 +465,14 @@ The buttons in the user interface have been created with the help of the DataTab
 \end{enumerate}
 \section{Deployment steps}
 \subsection{Database Scripts}
- The SQL scripts were tested on MySQL server using the client MySQLWorkbench. The respective versions can be found in Appendix A. In order to deploy the database scripts onto a database server the following steps need to be followed.
+ The SQL scripts were tested on MySQL server using the client MySQLWorkbench. The respective versions can be found in Appendix A. To deploy the database scripts onto a database server the following steps need to be followed.
  \begin{enumerate}
  	\item Create a user account within the database server (if not created already).
  	\item Login to the user account within the database server.
  	\item Navigate to the Tables:Database Creation Scripts folder located within the project folder hosted on Github. 
  	\item Execute the CREATE\_DATABASE\_PPI.sql SQL script in the MySQL client, to create the PPI database.
  	\item Execute the remaining scripts in the following order, CREATE\_TABLE\_AGENT.sql, CREATE\_TABLE\_DOMAIN.sql, CREATE\_TABLE\_DOMAIN\_AGENT.sql, CREATE\_TABLE\_RULE.sql and CREATE\_TABLE\_RULE\_DOMAIN\_AGENT.sql.
- 	\item Navigate to the Table Populate Scripts folder located within the project folder hosted in Github.
+ 	\item Navigate to the Table Populate Scripts folder located within the project folder hosted on Github.
  	\item Execute the SQL scripts in the following order AGENT.sql, DOMAIN\_V2.sql, RULE.sql, DOMAIN\_AGENT.sql and RULE\_DOMAIN\_AGENT.sql.
  \end{enumerate}
 \subsection{Web Application}
@@ -482,9 +482,9 @@ To deploy the web application onto a web server navigate to the django\_app fold
 	\item Navigate to the folder django\_app/djangonautic/ and run the following commands to synchronize the data models within the django application, with the database:\\
 	python manage.py migrate \\
 	python manage.py makemigrations
-	\item After synchronizing the data model, start the web server by running the following command:\\
+	\item After synchronizing the data model, start the webserver by running the following command:\\
 	python manage.py runserver\\
-	and acess the URLs for retrieving the PPIs based on agent name or domain names through a web browser.	
+	and access the URLs for retrieving the PPIs based on agent name or domain names through a web browser.	
 \end{enumerate}
 The web application was tested on the web browsers Safari, Google Chrome and Mozilla Firefox.
 \chapter{Verification and Results}
@@ -525,7 +525,7 @@ The purpose of this stored procedure is to return the PPI rules which contain th
 		\centering
 		\captionsetup{justification=centering}
 		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{AgentNameOutput1.png}	
-		\caption{The retrieved rules from the stored procedure called with the argument `Cam'}
+		\caption{The retrieved rules from the stored procedure GetRulesFromAgentName called with the argument `Cam'.}
 		\label{fig:AgentNameOutput1}		
 	\end{figure}
 
@@ -541,7 +541,7 @@ The purpose of this stored procedure is to return the PPI rules which contain th
 		\centering
 		\captionsetup{justification=centering}
 		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{AgentNameOutput2.png}	
-		\caption{The retrieved rules from the stored procedure called with the argument `SynGAPa'}
+		\caption{The retrieved rules from the stored procedure GetRulesFromAgentName called with the argument `SynGAPa'.}
 		\label{fig:AgentNameOutput2}		
 	\end{figure}
 \end{enumerate}
@@ -562,7 +562,7 @@ The purpose of this stored procedure is to return the PPI rules which contain th
 		\centering
 		\captionsetup{justification=centering}
 		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{DomainNameOutput1.png}	
-		\caption{The retrieved rules from the stored procedure called with the arguments `x' and 'n1'}
+		\caption{The retrieved rules from the stored procedure GetRulesFromDomainNamesPair called with the arguments `x' and 'n1'.}
 		\label{fig:DomainNameOutput1}		
 	\end{figure}
 
@@ -579,7 +579,7 @@ The purpose of this stored procedure is to return the PPI rules which contain th
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{DomainNameOutput2.png}	
-	\caption{The retrieved rules from the stored procedure called with the arguments `GK' and 'GKBD'}
+	\caption{The retrieved rules from the stored procedure GetRulesFromDomainNamesPair called with the arguments `GK' and 'GKBD'.}
 	\label{fig:DomainNameOutput2}		
 \end{figure}
 \end{enumerate}
@@ -590,20 +590,20 @@ In this section, we proceed to verify the outputs displayed in the UI created us
 \subsection{Agent Name}
 In this test, the stored procedure GetRulesAgentName is called from within the Django app and the output is displayed in the UI. The displayed output in the UI was matched with the output from the stored procedure in MySQL workbench.\\ Two examples of such test cases are as follows:
 \begin{enumerate}
-	\item The UI is called with the agent name CaM and a snippet of the retrieved rules is shown in figure \ref{fig:CorrectnessAgentName1}. The number of entries retrieved in the UI was 14 and the number of entries retrieved by the stored procedure was also 14. The rules retrieved were also the same as the ones retrieved by the stored procedure.
+	\item The UI is called with the agent name CaM and a snippet of the retrieved rules is shown in figure \ref{fig:CorrectnessAgentName1}. The number of entries retrieved in the UI was 14 and the number of entries retrieved by the stored procedure was also 14. The rules retrieved in the UI were also the same as the ones retrieved by the stored procedure.
 	\begin{figure}[H]
 		\centering
 		\captionsetup{justification=centering}
 		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{CorrectnessAgentName1.png}	
-		\caption{The retrieved rules from the stored procedure called with the agent name `CaM'}
+		\caption{The retrieved rules in the UI obtained by passing the agent name `CaM' as an argument.}
 		\label{fig:CorrectnessAgentName1}		
 	\end{figure}
-	\item The UI is called with the agent name SynGAPa and a snippet of the retrieved rules is shown in figure \ref{fig:CorrectnessAgentName2}. The number of entries retrieved in the UI was 6 and the number of entries retrieved by the stored procedure was also 6. The rules retrieved were also the same as the ones retrieved by the stored procedure. 
+	\item The UI is called with the agent name SynGAPa and a snippet of the retrieved rules is shown in figure \ref{fig:CorrectnessAgentName2}. The number of entries retrieved in the UI was 6 and the number of entries retrieved by the stored procedure was also 6. The rules retrieved in the UI were also the same as the ones retrieved by the stored procedure. 
 	\begin{figure}[H]
 		\centering
 		\captionsetup{justification=centering}
 		\includegraphics[width=\linewidth,height=6.5cm,keepaspectratio]{CorrectnessAgentName2.png}	
-		\caption{The retrieved rules from the stored procedure called with the agent name `SynGAPa'}
+		\caption{The retrieved rules in the UI obtained by passing the agent name `SynGAPa' as an argument.}
 		\label{fig:CorrectnessAgentName2}		
 	\end{figure}	
 \end{enumerate}
@@ -614,20 +614,20 @@ In this test, the stored procedure GetRulesFromDomainNamesPair is called from wi
 
 \begin{enumerate}
 	\item The UI is called with the domain names x,n1 and a snippet of the retrieved rules is shown in figure \ref{fig:CorrectnessDomainName1}. The number of entries retrieved in the UI was 4 and the number of entries retrieved by the stored procedure was also 4. 
-	The rules retrieved were also the same as the ones retrieved by the stored procedure. 
+	The rules retrieved in the UI were also the same as the ones retrieved by the stored procedure. 
 	\begin{figure}[H]
 		\centering
 		\captionsetup{justification=centering}
 		\includegraphics[width=\linewidth,height=14cm,keepaspectratio]{CorrectnessDomainName1.png}	
-		\caption{The retrieved rules from the stored procedure called with the domain names `x' and `n1'}
+		\caption{The retrieved rules in the UI obtained by passing the domain names `x' and `n1' as arguments.}
 		\label{fig:CorrectnessDomainName1}		
 	\end{figure}
-	\item The UI is called with the domain names GK,GKBD and a snippet of the retrieved rules is shown in figure \ref{fig:CorrectnessDomainName2}. The number of entries retrieved in the UI was 9 and the number of entries retrieved by the stored procedure was also 9. The rules retrieved were also the same as the ones retrieved by the stored procedure. 
+	\item The UI is called with the domain names GK,GKBD and a snippet of the retrieved rules is shown in figure \ref{fig:CorrectnessDomainName2}. The number of entries retrieved in the UI was 9 and the number of entries retrieved by the stored procedure was also 9. The rules retrieved in the UI were also the same as the ones retrieved by the stored procedure. 
 	\begin{figure}[H]
 		\centering
 		\captionsetup{justification=centering}
 		\includegraphics[width=\linewidth,height=6.5cm,keepaspectratio]{CorrectnessDomainName2.png}	
-		\caption{The retrieved rules from the stored procedure called with the domain names `GK' and `GKBD'}
+		\caption{The retrieved rules in the UI obtained by passing the domain names `GK' and `GKBD' as arguments.}
 		\label{fig:CorrectnessDomainName2}		
 	\end{figure}	
 \end{enumerate}
